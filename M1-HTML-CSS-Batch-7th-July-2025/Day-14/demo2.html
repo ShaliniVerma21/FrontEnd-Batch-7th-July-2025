@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Map Image Mapping</title>
+    <link rel="stylesheet" href="./CSS/demo2.css"> <!-- Link to external CSS file -->
+</head>
+
+<body>
+    <header>
+        <h1>Mapping an Image</h1>
+        <p>Click on the different continents of the map to know about them.</p>
+    </header>
+
+    <!-- Image Mapping -->
+    <figure>
+        <img src="./Images/world-map.png" width="960" height="492" alt="World Map" usemap="#worldmap" class="responsive-image">
+        <figcaption>Clickable areas on the world map.</figcaption>
+    </figure>
+
+    <map name="worldmap">
+        <!-- Define clickable areas for each continent -->
+        <area shape="rect" coords="184,36,272,158" alt="North America"
+            href="https://en.wikipedia.org/wiki/North_America" title="Learn about North America">
+        <area shape="rect" coords="282,215,354,367" alt="South America"
+            href="https://en.wikipedia.org/wiki/South_America" title="Learn about South America">
+        <area shape="rect" coords="506,151,570,333" alt="Africa" href="https://en.wikipedia.org/wiki/Africa"
+            title="Learn about Africa">
+        <area shape="rect" coords="618,42,791,162" alt="Asia" href="https://en.wikipedia.org/wiki/Asia"
+            title="Learn about Asia">
+        <area shape="rect" coords="509,44,593,110" alt="Europe" href="https://en.wikipedia.org/wiki/Europe"
+            title="Learn about Europe">
+        <area shape="rect" coords="786,288,862,341" alt="Australia"
+            href="https://en.wikipedia.org/wiki/Australia_(continent)" title="Learn about Australia">
+        <area shape="rect" coords="249,463,760,488" alt="Antarctica" href="https://en.wikipedia.org/wiki/Antarctica"
+            title="Learn about Antarctica">
+    </map>
+
+    <footer>
+        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

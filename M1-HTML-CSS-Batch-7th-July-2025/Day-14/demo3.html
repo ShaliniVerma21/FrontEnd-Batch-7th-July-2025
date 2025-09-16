@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Metadata and page settings -->
+    <meta charset="UTF-8"> <!-- Character encoding -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsive design for mobile devices -->
+    <title>HTML Quotation Tags and Phrase Tags</title> <!-- Page title -->
+
+    <!-- External resources -->
+    <link rel="stylesheet" href="./CSS/demo3.css"> <!-- Link to external CSS file for styling -->
+    <link rel="icon" href="./Images/image.png" type="image/x-icon"> <!-- Favicon for browser tab -->
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header>
+        <h1>Understanding HTML Quotation and Phrase Tags</h1> <!-- Main heading -->
+        <!-- Navigation Menu -->
+        <nav>
+            <ul>
+                <li><a href="#quotes">Quotes</a></li>
+                <li><a href="#abbreviations">Abbreviations</a></li>
+                <li><a href="#citations">Citations</a></li>
+                <li><a href="#text-direction">Text Direction</a></li>
+                <li><a href="#interactive">Interactive Example</a></li>
+                <li><a href="#form">Form Example</a></li>
+                <li><a href="#table">Table Example</a></li>
+                <li><a href="#multimedia">Multimedia Example</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Main Content Section -->
+    <main>
+        <!-- Section for Quotes -->
+        <section id="quotes">
+            <h2>Quotes</h2>
+            <!-- Inline Quote -->
+            <p><q>The journey of a thousand miles begins with a single step.</q></p>
+
+            <!-- Blockquote for longer quotes -->
+            <p>Here is a quote from WWF's website:</p>
+            <blockquote>
+                For 60 years, WWF has worked to help people and nature thrive. As the world's leading conservation organization,
+                WWF works in nearly 100 countries. At every level, we collaborate with people around the world to develop and
+                deliver innovative solutions that protect communities, wildlife, and the places in which they live.
+            </blockquote>
+        </section>
+
+        <!-- Section for Abbreviations and Address -->
+        <section id="abbreviations">
+            <h2>Abbreviations and Addresses</h2>
+            <!-- Abbreviation tag with tooltip -->
+            <p>The <abbr title="World Health Organization">WHO</abbr> was founded in 1948.</p>
+
+            <!-- Address tag for contact information -->
+            <address>
+                Written by John Doe.<br>
+                Visit us at:<br>
+                <a href="https://www.google.com" target="_blank" rel="noopener noreferrer">Example.com</a><br>
+                Box 564, Disneyland<br>
+                USA
+            </address>
+        </section>
+
+        <!-- Section for Citations and Code -->
+        <section id="citations">
+            <h2>Citations and Code</h2>
+            <!-- Cite tag for referencing works -->
+            <p><cite>The Scream</cite> by Edvard Munch. Painted in 1893.</p>
+
+            <!-- Code block for programming examples -->
+            <p>
+                Regular text.<br>
+                <code>
+                    var a = 2;<br>
+                    var b = 3;<br>
+                    var c = a + b;<br>
+                    console.log(c);<br>
+                </code>
+                Regular text.
+            </p>
+
+            <!-- Keyboard input representation -->
+            <p>Please press
+                <kbd>Ctrl</kbd> +
+                <kbd>Shift</kbd> +
+                <kbd>R</kbd>
+                to re-render a Web page.
+            </p>
+
+            <!-- Variable in code -->
+            <p>
+                <code>document.write(" <var>user-name</var>")</code>
+            </p>
+
+            <!-- Sample output -->
+            <p>
+                Result produced by the program is <samp>Hello World!</samp>
+            </p>
+        </section>
+
+        <!-- Section for Text Direction -->
+        <section id="text-direction">
+            <h2>Text Direction</h2>
+            <!-- bdo tag for changing text direction -->
+            <bdo dir="rtl">This text will be written from right to left</bdo>
+        </section>
+
+        <!-- Section for Interactive Example -->
+        <section id="interactive">
+            <h2>Interactive Example</h2>
+            <p>Try clicking the button below to see an alert:</p>
+            <!-- Button triggering JavaScript function -->
+            <button onclick="showAlert()">Click Me!</button>
+            <script>
+                // Function to display alert
+                function showAlert() {
+                    alert("Hello! This is an interactive alert.");
+                }
+            </script>
+        </section>
+
+        <!-- Section for Form Example -->
+        <section id="form">
+            <h2>Form Example</h2>
+            <!-- Basic HTML form -->
+            <form action="#" method="post">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required><br><br>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="4" required></textarea><br>
+                <input type="submit" value="Submit">
+            </form>
+        </section>
+
+        <!-- Section for Table Example -->
+        <section id="table">
+            <h2>Table Example</h2>
+            <table>
+                <caption>Sample Data Table</caption> <!-- Table caption -->
+                <thead>
+                    <tr>
+                        <th>Name</th> <!-- Table header -->
+                        <th>Age</th>
+                        <th>Country</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>John Doe</td> <!-- Table row data -->
+                        <td>30</td>
+                        <td>USA</td>
+                    </tr>
+                    <tr>
+                        <td>Jane Smith</td>
+                        <td>25</td>
+                        <td>UK</td>
+                    </tr>
+                    <tr>
+                        <td>Maria Garcia</td>
+                        <td>28</td>
+                        <td>Spain</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Section for Multimedia Example -->
+        <section id="multimedia">
+            <h2>Multimedia Example</h2>
+
+            <!-- Image example -->
+            <h3>Image Example</h3>
+            <img src="./Images/workplace.jpg" alt="Placeholder Image" width="300" height="200">
+
+            <!-- Video example -->
+            <h3>Video Example</h3>
+            <video width="320" height="240" controls>
+                <source src="./Video/3571264-uhd_3840_2160_30fps.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <!-- Audio example -->
+            <h3>Audio Example</h3>
+            <audio controls>
+                <source src="./Audio/nature-walk-124997.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </section>
+
+        <!-- Additional Resources -->
+        <section>
+            <h2>Additional Resources</h2>
+            <p>For more information on HTML tags, check out the following resources:</p>
+            <ul>
+                <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element" 
+                    target="_blank" rel="noopener noreferrer">MDN Web Docs - HTML Elements</a></li>
+                <li><a href="https://www.w3schools.com/tags/default.asp" 
+                    target="_blank" rel="noopener noreferrer">W3Schools - HTML Tags</a></li>
+                <li><a href="https://www.html5tutorial.info/" 
+                    target="_blank" rel="noopener noreferrer">HTML5 Tutorial</a></li>
+            </ul>
+        </section>
+    </main>
+
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>

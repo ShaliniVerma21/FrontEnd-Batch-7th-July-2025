@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session-14</title>
+    <link rel="stylesheet" href="./CSS/demo1.css"> <!-- Link to external CSS file -->
+    <!--Favicon-->
+    <link rel="icon" type="image/x-icon" href="./Images/image.png">
+</head>
+    <!--
+   1. Image Mapping, Favicon
+   2. Quotation Tags and Phrase tags
+   3. Introduction to HTML5 Semantic Tags
+    -->
+<body>
+    <header>
+        <h1>Image Mapping Example</h1>
+        <p>Click on the areas of the image to navigate to different pages.</p>
+    </header>
+
+    <!-- Image Mapping -->
+    <figure>
+        <img src="./Images/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379" 
+        class="responsive-image">
+        <figcaption>Clickable areas on the workplace image.</figcaption>
+    </figure>
+
+    <map name="workmap">
+        <!-- Define your clickable areas here -->
+        <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.google.com" 
+        title="Go to google Website">
+        <area shape="rect" coords="290,172,333,250" alt="Phone" href="https://www.wikipedia.org" 
+        title="View Wikipedia">
+        <area shape="circle" coords="337,300,44" alt="Cup of coffee" href="https://www.github.com" 
+        title="Learn about GitHub">
+    </map>
+
+    <footer>
+        <p>&copy; 2023 Your Company Name. All rights reserved.</p>
+    </footer>
+</body>
+
+</html>
