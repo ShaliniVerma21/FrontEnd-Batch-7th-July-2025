@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 3: Absolute Positioning - Image Overlay</title>
+    <style>
+        .image-container {
+            position: relative; /* Establishes a positioning context */
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+        }
+        .image {
+            width: 100%;
+            height: 100%;
+        }
+        .caption {
+            position: absolute; /* Positioned relative to the nearest positioned ancestor */
+            bottom: 10px;
+            left: 10px;
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="../Images/i1.png" alt="Placeholder" class="image">
+        <div class="caption">This is a caption</div>
+    </div>
+</body>
+</html>

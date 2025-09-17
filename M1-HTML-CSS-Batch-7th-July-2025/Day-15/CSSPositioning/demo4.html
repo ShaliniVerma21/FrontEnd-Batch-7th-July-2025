@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Example 4: Fixed Positioning - Sticky Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            height: 2000px; /* To enable scrolling */
+        }
+        .navbar {
+            position: fixed; /* Fixed position */
+            top: 0;
+            left: 0;
+            right: 0;
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        .content {
+            padding-top: 50px; /* Space for the fixed navbar */
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">Fixed Navigation Bar</div>
+    <div class="content">
+        <h1>Scroll Down</h1>
+        <p>This is an example of a fixed navigation bar.</p>
+        <p>Scroll down to see the effect of the fixed positioning.</p>
+    </div>
+</body>
+</html>

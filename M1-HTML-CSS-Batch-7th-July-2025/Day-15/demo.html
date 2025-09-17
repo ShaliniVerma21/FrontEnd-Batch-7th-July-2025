@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session-15</title>
+</head>
+
+<body>
+    <!--
+Responsiveness
+   1. HTML Viewport meta tag → Tells browser to scale content properly.
+   2. Responsive Images → Scale using max-width or srcset.
+   3. Responsive Texts → Use relative units (rem, vw, clamp).
+   4. Responsive Layouts(using flex or grids) → Use Flexbox/Grid with fluid widths.
+   5. CSS media Queries → Apply conditional CSS for different devices.
+    -->
+
+    <!--
+What is Responsiveness?
+
+Responsiveness means designing web pages that look good on all devices (desktop, tablet, mobile, etc.) 
+without requiring separate versions.
+A responsive website adapts layout, images, and text sizes dynamically based on the screen size, 
+resolution, and orientation.
+
+1️⃣ HTML Viewport Meta Tag
+The viewport is the visible area of a webpage on a device.
+By default, mobile browsers render web pages as if they were on a desktop screen 
+and then scale them down, which breaks the layout.
+The viewport meta tag tells the browser how to control the page’s dimensions and scaling.
+
+Syntax ->
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+Important Points
+1. width=device-width → matches the screen’s width.
+2. initial-scale=1.0 → sets zoom level (1 = no zoom).
+3. Ensures consistent scaling on different devices.
+
+✅ Way to Achieve
+Always include this line in responsive web projects.
+
+2️⃣ Responsive Images
+
+Images should adapt to screen size without breaking the layout.
+Large fixed-size images can cause horizontal scrolling and poor UX.
+
+Techniques
+
+1. Fluid Images using CSS:
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+2. HTML srcset & sizes Attributes:
+
+<img src="small.jpg" 
+     srcset="medium.jpg 600w, large.jpg 1200w" 
+     sizes="(max-width: 600px) 100vw, 50vw" 
+     alt="Example">
+
+Important Points
+1. Use max-width:100% to scale down images.
+2. srcset loads the best image depending on device resolution.
+3. Helps performance (mobile loads smaller images).
+
+3️⃣ Responsive Texts
+
+Font size should scale with device size.
+Fixed px values may look too small on mobile or too large on desktop.
+
+Techniques
+
+1. Relative Units
+Use em, rem, %, vw instead of px.
+Example:
+
+h1 { font-size: 3vw; } /* 3% of viewport width */
+
+2. CSS Clamp() Function
+
+p {
+  font-size: clamp(14px, 2vw, 20px);
+}
+
+→ Minimum = 14px, Preferred = 2vw, Maximum = 20px
+
+Important Points
+1. Use rem for accessibility (scales with root font size).
+2. Use clamp() for flexible yet controlled sizing.
+
+4️⃣ Responsive Layouts (Flexbox / Grid)
+
+Traditional layouts used floats, which were not responsive-friendly.
+Flexbox and CSS Grid are modern layout systems that adapt automatically.
+
+Flexbox Example -- 
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.item {
+  flex: 1 1 300px; /* grow, shrink, base width */
+}
+✅ Items wrap & adjust width depending on screen.
+
+Grid Example --
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 10px;
+}
+✅ Auto-fit makes columns adjust for available space.
+
+Important Points
+1. Use flex-wrap: wrap for responsive rows.
+2. Use auto-fit / auto-fill with minmax() in Grid.
+3. Avoid fixed widths → use percentages or flexible units.
+
+5️⃣ CSS Media Queries
+Media queries allow applying different styles depending on screen size or device.
+Essential for fine-tuning design on different breakpoints.
+
+Syntax
+@media (max-width: 768px) {
+  body {
+    background-color: lightblue;
+  }
+}
+
+Common Breakpoints
+
+1. max-width: 1200px → Large screens (desktop)
+2. max-width: 992px → Tablets (landscape)
+3. max-width: 768px → Tablets (portrait)
+4. max-width: 576px → Mobile
+
+Important Points
+1. Use mobile-first approach → design for small screens, then scale up.
+2. Avoid too many breakpoints; focus on major device ranges.
+3. Combine with flex/grid for maximum effect.
+    -->
+</body>
+
+</html>

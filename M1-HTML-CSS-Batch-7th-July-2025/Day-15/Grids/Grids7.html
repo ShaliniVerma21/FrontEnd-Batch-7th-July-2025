@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete CSS Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Container for the entire layout */
+        .container {
+            display: grid;
+            grid-template-areas: 
+                "header header header"
+                "nav content sidebar"
+                "footer footer footer";
+            grid-template-columns: 200px 1fr 200px; /* Sidebar, main content, sidebar */
+            grid-template-rows: auto 1fr auto; /* Header, main content, footer */
+            min-height: 100vh; /* Full height of the viewport */
+        }
+
+        /* Header */
+        .header {
+            grid-area: header;
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Navigation */
+        .nav {
+            grid-area: nav;
+            background-color: #333;
+            color: white;
+            padding: 20px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            display: block; /* Make links block elements */
+            padding: 10px;
+        }
+
+        .nav a:hover {
+            background-color: #575757; /* Change background on hover */
+        }
+
+        /* Main content area */
+        .content {
+            grid-area: content;
+            background-color: #fff;
+            padding: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            grid-area: sidebar;
+            background-color: #f0f0f0;
+            padding: 20px;
+        }
+
+        /* Footer */
+        .footer {
+            grid-area: footer;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-areas: 
+                    "header"
+                    "nav"
+                    "content"
+                    "sidebar"
+                    "footer";
+                grid-template-columns: 1fr; /* Full width for all sections */
+                grid-template-rows: auto; /* Auto height for all sections */
+            }
+
+            .nav {
+                grid-area: nav;
+            }
+
+            .sidebar {
+                grid-area: sidebar;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>My CSS Grid Layout</h1>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <h2>Navigation</h2>
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="content">
+            <h2>Main Content</h2>
+            <p>This is the main content area. Here you can add your articles, images, or any other content you want to display.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        </div>
+
+        <!-- Sidebar -->
+        <div class="sidebar">
+            <h2>Sidebar</h2>
+            <p>Links</p>
+            <p>More Links</p>
+            <p>Additional Links</p>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2023 My CSS Grid Layout. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

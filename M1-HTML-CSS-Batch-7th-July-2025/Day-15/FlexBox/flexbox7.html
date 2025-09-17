@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Complete Flexbox Layout</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        /* Container for the entire layout */
+        .container {
+            display: flex;
+            flex-direction: column;
+            /* Stack header, main, and footer vertically */
+            min-height: 100vh;
+            /* Full height of the viewport */
+        }
+
+        /* Header */
+        .header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* Main content area */
+        .main {
+            display: flex;
+            /* Use flexbox for the main content */
+            flex: 1;
+            /* Allow main to grow and fill available space */
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            width: 200px;
+            /* Fixed width for sidebar */
+        }
+
+        /* Content area */
+        .content {
+            background-color: #fff;
+            padding: 20px;
+            flex: 1;
+            /* Allow content to grow and fill available space */
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 10px;
+        }
+
+        /* Navigation */
+        .nav {
+            display: flex;
+            /* Use flexbox for navigation */
+            justify-content: space-around;
+            /* Space items evenly */
+            background-color: #333;
+            padding: 10px;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px;
+        }
+
+        .nav a:hover {
+            background-color: #575757;
+            /* Change background on hover */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>My Flexbox Layout</h1>
+        </div>
+
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="#">Home</a>
+            <a href="#">About</a>
+            <a href="#">Services</a>
+            <a href="#">Contact</a>
+        </div>
+
+        <!-- Main Content Area -->
+        <div class="main">
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <h2>Sidebar</h2>
+                <p>Links</p>
+                <p>More Links</p>
+                <p>Additional Links</p>
+            </div>
+
+            <!-- Content Area -->
+            <div class="content">
+                <h2>Main Content</h2>
+                <p>This is the main content area. Here you can add your articles, images, or any other content you want
+                    to display.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua.</p>
+                <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                    consequat.</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div class="footer">
+            <p>&copy; 2023 My Flexbox Layout. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+
+</html>
