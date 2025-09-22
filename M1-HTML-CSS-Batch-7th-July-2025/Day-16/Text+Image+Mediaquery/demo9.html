@@ -1,0 +1,115 @@
+<!-- Demo 9: Upgraded Professional Responsive Video Embed -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 9 - Professional Responsive Video</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      color: #111827;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #2563eb;
+      color: #f9fafb;
+      text-align: center;
+      padding: 30px 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .content h2 {
+      font-size: 1.8rem;
+      color: #1e3a8a;
+      margin-bottom: 15px;
+    }
+    .content p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+    }
+    .video-container {
+      position: relative;
+      padding-bottom: 56.25%;
+      height: 0;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+      margin-bottom: 20px;
+    }
+    .video-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
+    .additional-info {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: space-between;
+      margin-top: 20px;
+    }
+    .info-box {
+      flex: 1 1 45%;
+      background-color: #e0f2fe;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .info-box h3 {
+      margin-top: 0;
+      color: #0c4a6e;
+    }
+    @media(max-width: 768px) {
+      .info-box { flex: 1 1 100%; }
+      header h1 { font-size: 1.5rem; }
+      .content h2 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Video Demo</h1>
+  </header>
+
+  <div class="content">
+    <h2>Professional Responsive Video Embed</h2>
+    <p>This demo showcases a fully responsive video that maintains its aspect ratio across all devices. The layout and design have been enhanced with professional styling, padding, shadows, and a clean content section.</p>
+    <div class="video-container">
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <div class="additional-info">
+      <div class="info-box">
+        <h3>Key Features</h3>
+        <p>• Fully responsive design</p>
+        <p>• Maintains 16:9 aspect ratio</p>
+        <p>• Smooth scaling on all screen sizes</p>
+      </div>
+      <div class="info-box">
+        <h3>Usage Tips</h3>
+        <p>• Ideal for embedding YouTube or Vimeo videos</p>
+        <p>• Can be integrated into portfolios, blogs, or landing pages</p>
+        <p>• Enhances professional look of web pages</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

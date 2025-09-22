@@ -1,0 +1,102 @@
+<!-- Demo 7: Upgraded Professional Responsive Image Gallery -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 7 - Professional Responsive Image Gallery</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      color: #111827;
+    }
+    header {
+      background-color: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .content {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    .content p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+      text-align: center;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      justify-content: center;
+    }
+    .gallery img {
+      width: 32%;
+      border-radius: 12px;
+      height: auto;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+      cursor: pointer;
+    }
+    .gallery img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+    @media(max-width: 900px) { .gallery img { width: 48%; } }
+    @media(max-width: 600px) { .gallery img { width: 100%; } }
+    .image-caption {
+      text-align: center;
+      font-size: 0.95rem;
+      margin-top: 5px;
+      color: #6b7280;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Professional Responsive Image Gallery</h1>
+  </header>
+
+  <div class="content">
+    <p>This gallery displays images that are fully responsive, with professional styling including shadows, hover effects, and rounded corners. Resize the browser to see the images adjust seamlessly across devices.</p>
+    <div class="gallery">
+      <div>
+        <img src="https://via.placeholder.com/300x200.png?text=Image+1" alt="Image 1">
+        <div class="image-caption">Image 1 Description</div>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/300x200.png?text=Image+2" alt="Image 2">
+        <div class="image-caption">Image 2 Description</div>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/300x200.png?text=Image+3" alt="Image 3">
+        <div class="image-caption">Image 3 Description</div>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/300x200.png?text=Image+4" alt="Image 4">
+        <div class="image-caption">Image 4 Description</div>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/300x200.png?text=Image+5" alt="Image 5">
+        <div class="image-caption">Image 5 Description</div>
+      </div>
+      <div>
+        <img src="https://via.placeholder.com/300x200.png?text=Image+6" alt="Image 6">
+        <div class="image-caption">Image 6 Description</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

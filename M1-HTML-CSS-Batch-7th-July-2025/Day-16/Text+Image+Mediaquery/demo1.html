@@ -1,0 +1,79 @@
+<!-- Demo 1: Upgraded Professional Responsive Text -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 1 - Professional Responsive Text</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      color: #111827;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 3vw;
+    }
+    .content {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .content h2 {
+      font-size: 2.5vw;
+      color: #1d4ed8;
+      margin-bottom: 20px;
+    }
+    .content p {
+      font-size: 1.2vw;
+      color: #374151;
+      margin-bottom: 20px;
+    }
+    .highlight {
+      background-color: #fef3c7;
+      padding: 10px 15px;
+      border-left: 5px solid #f59e0b;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 15px;
+    }
+    @media(max-width: 900px) {
+      header h1 { font-size: 5vw; }
+      .content h2 { font-size: 4vw; }
+      .content p { font-size: 2vw; }
+    }
+    @media(max-width: 600px) {
+      header h1 { font-size: 7vw; }
+      .content h2 { font-size: 6vw; }
+      .content p { font-size: 3vw; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Professional Responsive Text Demo</h1>
+  </header>
+  <div class="content">
+    <h2>Dynamic Text Scaling</h2>
+    <p>This demo showcases professional text responsiveness with scalable headings and paragraphs that adjust according to viewport size. The layout includes a content container with shadows and padding for a polished look.</p>
+    <div class="highlight">Tip: Using relative units like <code>vw</code> ensures text is readable on all devices.</div>
+    <p>Resize your browser or view on mobile to see the heading and paragraph adjust dynamically, maintaining both readability and aesthetic design.</p>
+  </div>
+</body>
+</html>

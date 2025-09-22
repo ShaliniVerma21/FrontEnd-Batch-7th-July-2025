@@ -1,0 +1,111 @@
+<!-- Demo 6: Advanced Professional Responsive Typography with Multiple Styles -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 6 - Advanced Responsive Typography</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background-color: #f3f4f6;
+      color: #111827;
+      line-height: 1.6;
+    }
+    header {
+      background-color: #ef4444;
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      font-size: 5vw;
+      margin: 0;
+    }
+    .content {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    }
+    .content h2 {
+      font-size: 4vw;
+      color: #dc2626;
+      margin-bottom: 20px;
+    }
+    .content p {
+      font-size: 1.8vw;
+      margin-bottom: 20px;
+      color: #374151;
+    }
+    .text-box {
+      background-color: #fef3c7;
+      padding: 15px 20px;
+      border-left: 5px solid #f59e0b;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .secondary-text {
+      font-size: 1.6vw;
+      color: #1e40af;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+    .quote {
+      font-size: 2vw;
+      font-style: italic;
+      color: #6b7280;
+      border-left: 4px solid #2563eb;
+      padding-left: 15px;
+      margin-bottom: 20px;
+    }
+    .caption {
+      font-size: 1vw;
+      color: #9ca3af;
+      text-align: center;
+      margin-top: 10px;
+    }
+    @media(max-width: 900px) {
+      header h1 { font-size: 7vw; }
+      .content h2 { font-size: 6vw; }
+      .content p { font-size: 3vw; }
+      .secondary-text { font-size: 2.5vw; }
+      .quote { font-size: 3vw; }
+      .caption { font-size: 1.5vw; }
+    }
+    @media(max-width: 600px) {
+      header h1 { font-size: 10vw; }
+      .content h2 { font-size: 8vw; }
+      .content p { font-size: 4vw; }
+      .secondary-text { font-size: 4vw; }
+      .quote { font-size: 5vw; }
+      .caption { font-size: 2.5vw; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Advanced Responsive Typography Demo</h1>
+  </header>
+
+  <div class="content">
+    <h2>Professional Typography Examples</h2>
+    <p>This demo illustrates multiple responsive text styles, including headings, paragraphs, quotes, captions, and highlighted text using <code>vw</code> units.</p>
+    <div class="text-box">
+      <p>Tip: Use different typography styles to create hierarchy and emphasize important information. Relative units like <code>vw</code> make text scale dynamically on all devices.</p>
+    </div>
+
+    <p class="secondary-text">Secondary highlighted text example for emphasis.</p>
+    <p class="quote">“Responsive typography improves readability and visual hierarchy across all screen sizes.”</p>
+    <p class="caption">Caption text: Ideal for images or charts descriptions.</p>
+
+    <p>Resize your browser or view on mobile to see all text elements scale proportionally and maintain a professional layout.</p>
+  </div>
+</body>
+</html>

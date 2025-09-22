@@ -1,0 +1,74 @@
+<!-- Demo 2: Upgraded Professional Responsive Images -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 2 - Professional Responsive Images</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      color: #111827;
+    }
+    header {
+      background-color: #2563eb;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+    .container p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      color: #374151;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      transition: transform 0.3s;
+    }
+    img:hover {
+      transform: scale(1.05);
+    }
+    .caption {
+      font-size: 0.9rem;
+      color: #6b7280;
+      margin-top: 10px;
+    }
+    @media(max-width: 600px) {
+      header h1 { font-size: 1.5rem; }
+      .container p { font-size: 1rem; }
+      .caption { font-size: 0.8rem; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Responsive Image Demo</h1>
+  </header>
+  <div class="container">
+    <p>Images scale proportionally to fit the container width and maintain a professional appearance. Hover over the image to see a subtle zoom effect.</p>
+    <img src="https://via.placeholder.com/800x400.png?text=Responsive+Image" alt="Responsive Example">
+    <p class="caption">Figure: Professional responsive image with hover effect and shadow.</p>
+  </div>
+</body>
+</html>

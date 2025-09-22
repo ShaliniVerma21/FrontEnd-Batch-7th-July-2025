@@ -1,0 +1,107 @@
+<!-- Demo 5: Upgraded Professional Responsive Grid Layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 5 - Professional Responsive Grid</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      color: #111827;
+    }
+    header {
+      background-color: #16a34a;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .content {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    .content p {
+      text-align: center;
+      font-size: 1.2rem;
+      margin-bottom: 30px;
+      color: #374151;
+    }
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .grid-item {
+      background: linear-gradient(135deg, #16a34a, #22c55e);
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .grid-item:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+    .grid-item h3 {
+      margin: 0 0 10px 0;
+      font-size: 1.4rem;
+    }
+    .grid-item p {
+      margin: 0;
+      font-size: 1rem;
+    }
+    @media(max-width: 900px) {
+      .grid-container { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media(max-width: 600px) {
+      .grid-container { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Professional Responsive Grid Layout</h1>
+  </header>
+  <div class="content">
+    <p>This responsive grid demonstrates dynamic column adjustments with professional styling, hover effects, shadows, and gradient backgrounds for each grid item.</p>
+    <div class="grid-container">
+      <div class="grid-item">
+        <h3>Item 1</h3>
+        <p>Description for Item 1.</p>
+      </div>
+      <div class="grid-item">
+        <h3>Item 2</h3>
+        <p>Description for Item 2.</p>
+      </div>
+      <div class="grid-item">
+        <h3>Item 3</h3>
+        <p>Description for Item 3.</p>
+      </div>
+      <div class="grid-item">
+        <h3>Item 4</h3>
+        <p>Description for Item 4.</p>
+      </div>
+      <div class="grid-item">
+        <h3>Item 5</h3>
+        <p>Description for Item 5.</p>
+      </div>
+      <div class="grid-item">
+        <h3>Item 6</h3>
+        <p>Description for Item 6.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

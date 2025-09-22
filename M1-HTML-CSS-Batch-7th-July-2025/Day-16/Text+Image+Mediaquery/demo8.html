@@ -1,0 +1,108 @@
+<!-- Demo 8: Upgraded Professional Responsive Card Layout -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 8 - Professional Responsive Card Layout</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f3f4f6;
+      color: #111827;
+    }
+    header {
+      background-color: #2563eb;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      border-radius: 0 0 12px 12px;
+    }
+    header h1 {
+      margin: 0;
+      font-size: 2rem;
+    }
+    .content {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 20px;
+    }
+    .content p {
+      font-size: 1.1rem;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .cards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .card {
+      flex: 1 1 calc(33.333% - 20px);
+      background: linear-gradient(135deg, #2563eb, #3b82f6);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.15);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.25);
+    }
+    .card h3 {
+      margin-top: 0;
+      font-size: 1.4rem;
+    }
+    .card p {
+      font-size: 1rem;
+      margin: 10px 0 0 0;
+    }
+    @media(max-width: 900px) {
+      .card { flex: 1 1 calc(50% - 20px); }
+    }
+    @media(max-width: 600px) {
+      .card { flex: 1 1 100%; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Professional Responsive Card Layout</h1>
+  </header>
+  <div class="content">
+    <p>This layout demonstrates a fully responsive card design using Flexbox. Each card contains a title and description, with hover effects and shadows for a professional look.</p>
+    <div class="cards">
+      <div class="card">
+        <h3>Card 1</h3>
+        <p>Details about Card 1 content and purpose.</p>
+      </div>
+      <div class="card">
+        <h3>Card 2</h3>
+        <p>Details about Card 2 content and purpose.</p>
+      </div>
+      <div class="card">
+        <h3>Card 3</h3>
+        <p>Details about Card 3 content and purpose.</p>
+      </div>
+      <div class="card">
+        <h3>Card 4</h3>
+        <p>Details about Card 4 content and purpose.</p>
+      </div>
+      <div class="card">
+        <h3>Card 5</h3>
+        <p>Details about Card 5 content and purpose.</p>
+      </div>
+      <div class="card">
+        <h3>Card 6</h3>
+        <p>Details about Card 6 content and purpose.</p>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
