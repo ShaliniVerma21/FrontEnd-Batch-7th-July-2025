@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 4: Fixed Positioning</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f9fafb;
+    }
+    header {
+      position: fixed; /* always stays at top */
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: #2563eb;
+      color: white;
+      padding: 15px;
+      text-align: center;
+      z-index: 1000;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    header h1 {
+      margin: 0;
+      font-size: 20px;
+    }
+    main {
+      margin-top: 80px; /* to avoid overlap with fixed header */
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo 4: Fixed Positioning</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Introduction</h2>
+      <p><code>position: fixed</code> keeps an element in the same position even when the page is scrolled. It is positioned relative to the browser window.</p>
+    </section>
+
+    <section>
+      <h2>Scroll Down</h2>
+      <p>As you scroll, the blue header at the top remains visible and fixed in place.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse nec purus et nulla cursus viverra. Donec ut feugiat libero. Proin euismod, justo nec facilisis egestas, ligula lorem gravida orci, ut venenatis risus mauris vel sapien.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec ac tellus ac purus sollicitudin ultrices. Integer tincidunt finibus turpis, in fermentum urna cursus sed.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus luctus imperdiet lacus, sed aliquet arcu facilisis vel. Sed sed efficitur nisl.</p>
+      <p>Keep scrolling to see the fixed header effect in action...</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vel posuere sapien, at sagittis ligula. Sed vehicula semper sapien.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Positioning Demos. All rights reserved.
+  </footer>
+</body>
+</html>

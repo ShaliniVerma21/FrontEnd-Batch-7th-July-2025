@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 10: Flexbox + Absolute Positioning Badge</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f3f4f6;
+    }
+    header {
+      background: #8b5cf6;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .card-container {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .card {
+      position: relative;
+      width: 200px;
+      height: 150px;
+      background: #fbbf24;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+      color: #333;
+      text-align: center;
+    }
+    .badge {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background: #ef4444;
+      color: white;
+      padding: 5px 10px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: bold;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    footer {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo 10: Flexbox + Absolute Positioning Badge</h1>
+  </header>
+
+  <section>
+    <h2>Cards with Badges</h2>
+    <p>This demo combines <code>flexbox</code> for layout and <code>absolute positioning</code> for badges on each card.</p>
+
+    <div class="card-container">
+      <div class="card">
+        Card 1
+        <div class="badge">New</div>
+      </div>
+      <div class="card">
+        Card 2
+        <div class="badge">Sale</div>
+      </div>
+      <div class="card">
+        Card 3
+        <div class="badge">Hot</div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    © 2025 Positioning Demos. All rights reserved.
+  </footer>
+</body>
+</html>

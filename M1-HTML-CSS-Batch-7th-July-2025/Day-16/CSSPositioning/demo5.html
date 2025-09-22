@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 5: Sticky Positioning</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+      background: #f3f4f6;
+    }
+    header {
+      background: #059669;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    }
+    main {
+      padding: 20px;
+    }
+    section {
+      margin-bottom: 50px;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .sticky {
+      position: -webkit-sticky; /* for Safari */
+      position: sticky;
+      top: 0;
+      background: #10b981;
+      color: white;
+      padding: 10px;
+      font-weight: bold;
+      border-radius: 6px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+    }
+    footer {
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+      margin: 40px 0 20px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo 5: Sticky Positioning</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>About Sticky</h2>
+      <p><code>position: sticky</code> toggles between relative and fixed depending on scroll position. It stays "stuck" within its parent container.</p>
+    </section>
+
+    <section>
+      <div class="sticky">Sticky Header Inside Section</div>
+      <p>Scroll down this section and notice how the green box stays visible until the parent section ends.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus volutpat nunc in massa pellentesque, nec fermentum purus consequat.</p>
+      <p>Integer nec commodo lorem, nec tristique elit. Suspendisse vitae justo ac libero bibendum interdum at nec urna.</p>
+      <p>Aliquam erat volutpat. Donec bibendum risus sit amet leo elementum, in imperdiet ligula ullamcorper.</p>
+      <p>Sed ac sapien sit amet nunc faucibus malesuada vel quis lorem. Vestibulum dictum, eros non aliquet ultrices, lorem velit egestas purus.</p>
+      <p>Keep scrolling until this section ends...</p>
+    </section>
+
+    <section>
+      <h2>Next Section</h2>
+      <p>Once you exit the above section, the sticky box no longer sticks.</p>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Positioning Demos. All rights reserved.
+  </footer>
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 6: Z-Index with Positioning</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f9fafb;
+    }
+    header {
+      background: #7c3aed;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .container {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      background: #f3f4f6;
+      border: 2px dashed #ccc;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .box {
+      position: absolute;
+      width: 150px;
+      height: 150px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 8px;
+    }
+    .box1 {
+      background: #ef4444;
+      top: 30px;
+      left: 40px;
+      z-index: 1;
+    }
+    .box2 {
+      background: #3b82f6;
+      top: 60px;
+      left: 80px;
+      z-index: 2;
+    }
+    .box3 {
+      background: #10b981;
+      top: 90px;
+      left: 120px;
+      z-index: 3;
+    }
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo 6: Z-Index with Positioning</h1>
+  </header>
+
+  <div class="container">
+    <div class="box box1">Box 1 (z-index: 1)</div>
+    <div class="box box2">Box 2 (z-index: 2)</div>
+    <div class="box box3">Box 3 (z-index: 3)</div>
+  </div>
+
+  <section>
+    <h2>Explanation</h2>
+    <p>The <code>z-index</code> property controls the stack order of positioned elements. Higher values appear in front of lower ones.</p>
+  </section>
+
+  <footer>
+    © 2025 Positioning Demos. All rights reserved.
+  </footer>
+</body>
+</html>

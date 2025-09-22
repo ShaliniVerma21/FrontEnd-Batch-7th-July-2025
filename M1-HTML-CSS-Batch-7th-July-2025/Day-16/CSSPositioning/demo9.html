@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 9: Float Layout</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f3f4f6;
+    }
+    header {
+      background: #f97316;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 8px;
+      margin-bottom: 20px;
+    }
+    .container {
+      overflow: hidden; /* clears floats */
+      background: #fff;
+      border-radius: 8px;
+      padding: 10px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    .left {
+      float: left;
+      width: 60%;
+      background: #3b82f6;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 6px;
+      margin-right: 10px;
+    }
+    .right {
+      float: left;
+      width: 35%;
+      background: #10b981;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      border-radius: 6px;
+    }
+    footer {
+      margin-top: 30px;
+      text-align: center;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo 9: Float Layout</h1>
+  </header>
+
+  <div class="container">
+    <div class="left">
+      <h2>Main Content</h2>
+      <p>This is the main content area. Using <code>float: left</code>, it aligns beside the sidebar.</p>
+      <p>Float was commonly used in legacy layouts before Flexbox and Grid.</p>
+    </div>
+    <div class="right">
+      <h2>Sidebar</h2>
+      <p>This is a sidebar. Float allows content to wrap around other elements.</p>
+    </div>
+  </div>
+
+  <footer>
+    © 2025 Positioning Demos. All rights reserved.
+  </footer>
+</body>
+</html>

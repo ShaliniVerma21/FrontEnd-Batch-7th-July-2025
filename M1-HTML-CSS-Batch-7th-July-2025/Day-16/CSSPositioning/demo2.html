@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Demo 2: Relative Positioning</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      background: #f9f9f9;
+    }
+    header {
+      background: #16a34a;
+      color: white;
+      padding: 15px;
+      border-radius: 8px;
+    }
+    h1 {
+      margin: 0;
+    }
+    section {
+      margin-top: 20px;
+      background: #fff;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    p {
+      margin: 10px 0;
+      line-height: 1.5;
+    }
+    .box {
+      background: #16a34a;
+      color: white;
+      padding: 20px;
+      border-radius: 6px;
+      margin: 10px 0;
+      position: relative; /* relative positioning */
+      left: 30px;  /* shifted right */
+      top: 15px;   /* shifted down */
+    }
+    footer {
+      margin-top: 30px;
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Demo 2: Relative Positioning</h1>
+  </header>
+
+  <section>
+    <h2>About Relative Positioning</h2>
+    <p><code>position: relative</code> keeps the element in the document flow, but allows it to be shifted using <code>top</code>, <code>left</code>, <code>right</code>, or <code>bottom</code>.</p>
+    <div class="box">I am relatively positioned (moved right & down)</div>
+  </section>
+
+  <footer>
+    © 2025 Positioning Demos. All rights reserved.
+  </footer>
+</body>
+</html>
