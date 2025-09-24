@@ -1,0 +1,148 @@
+<!--
+Demo 9: Professional Gradient Text Showcase
+Author: CSS Gradient Expert
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Gradient Text</title>
+  <style>
+    /* ================================
+       Global Styles
+    ================================= */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Arial', sans-serif;
+      background: #f0f0f0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      min-height: 100vh;
+      padding: 40px 20px;
+      gap: 50px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      text-align: center;
+    }
+
+    /* ================================
+       Gradient Text Base Class
+       - Uses background-clip for text
+       - Transparent text fill
+    ================================= */
+    .gradient-text {
+      font-size: 4rem;
+      font-weight: bold;
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+    }
+
+    .gradient-text:hover {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+
+    /* ================================
+       Different Gradient Variants
+    ================================= */
+    .linear-gradient1 {
+      background: linear-gradient(90deg, #ff512f, #dd2476);
+    }
+
+    .linear-gradient2 {
+      background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+
+    .linear-gradient3 {
+      background: linear-gradient(45deg, #ff5f6d, #ffc371);
+    }
+
+    .radial-gradient1 {
+      background: radial-gradient(circle at center, #f6d365, #fda085);
+    }
+
+    .radial-gradient2 {
+      background: radial-gradient(circle at top left, #89f7fe, #66a6ff);
+    }
+
+    /* ================================
+       Animated Gradient Text
+       - Smooth color shift using keyframes
+    ================================= */
+    .animated-gradient {
+      background: linear-gradient(270deg, #ff6a00, #ee0979, #00c6ff, #0072ff);
+      background-size: 800% 800%;
+      animation: gradientAnimation 8s ease infinite;
+    }
+
+    @keyframes gradientAnimation {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ================================
+       Container for Multiple Examples
+    ================================= */
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 30px;
+      text-align: center;
+    }
+
+    /* ================================
+       Responsive Adjustments
+    ================================= */
+    @media (max-width: 768px) {
+      .gradient-text {
+        font-size: 3rem;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Page Heading -->
+  <h1>Professional Gradient Text Showcase</h1>
+
+  <!-- ================================
+       Gradient Text Examples
+  ================================= -->
+  <div class="text-container">
+
+    <!-- Linear Gradient Text -->
+    <div class="gradient-text linear-gradient1">Linear Gradient One</div>
+    <div class="gradient-text linear-gradient2">Linear Gradient Two</div>
+    <div class="gradient-text linear-gradient3">Linear Gradient Three</div>
+
+    <!-- Radial Gradient Text -->
+    <div class="gradient-text radial-gradient1">Radial Gradient One</div>
+    <div class="gradient-text radial-gradient2">Radial Gradient Two</div>
+
+    <!-- Animated Gradient Text -->
+    <div class="gradient-text animated-gradient">Animated Gradient Text</div>
+
+  </div>
+
+</body>
+
+</html>

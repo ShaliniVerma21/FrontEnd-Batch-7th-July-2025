@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Deepawali Rangoli - 400 Shapes</title>
+  <style>
+    /* ===== Page Styling ===== */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
+      overflow: hidden;
+      background: conic-gradient(from 90deg, #ffeaa7, #fab1a0, #f8a5c2, #dfe6e9, #ffeaa7);
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    .rangoli {
+      position: relative;
+      width: 1200px;
+      height: 1200px;
+      border: 10px solid #ff7675;
+      outline: 8px double #6c5ce7;
+      box-shadow: 0 0 40px rgba(0,0,0,0.6), inset 0 0 40px rgba(255, 223, 0, 0.5);
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff8e7, #ffeaa7, #fab1a0);
+      margin: 20px;
+      padding: 20px;
+    }
+
+    /* ===== Shape Base ===== */
+    .shape {
+      width: 60px;
+      height: 60px;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: bold;
+      font-size: 12px;
+      color: white;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+      box-shadow: 4px 4px 12px rgba(0,0,0,0.5);
+      margin: 5px;
+      padding: 5px;
+      outline: 2px solid rgba(255,255,255,0.4);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      animation: glow 3s infinite alternate;
+    }
+
+    /* Hover effect */
+    .shape:hover {
+      transform: scale(1.3) rotate(15deg);
+      box-shadow: 6px 6px 20px rgba(0,0,0,0.8), 0 0 15px #f39c12;
+      z-index: 10;
+    }
+
+    /* Glowing Animation */
+    @keyframes glow {
+      from { filter: drop-shadow(0 0 5px #ffeaa7); }
+      to { filter: drop-shadow(0 0 20px #f39c12); }
+    }
+
+    /* ===== 20 Shape Variations ===== */
+    .shape1 {border-radius: 50%; background: linear-gradient(45deg, #ff7675, #d63031);}
+    .shape2 {border-radius: 20%; background: linear-gradient(135deg, #74b9ff, #0984e3);}
+    .shape3 {border-radius: 0 50% 50% 0; background: #00cec9;}
+    .shape4 {border-radius: 50% 0 0 50%; background: #6c5ce7;}
+    .shape5 {border: 3px solid #f39c12; background: #ffeaa7; color:#2d3436;}
+    .shape6 {border: 3px dashed #16a085; background: #55efc4;}
+    .shape7 {border: 3px dotted #8e44ad; background: #dfe6e9; color:#2c3e50;}
+    .shape8 {box-shadow: inset 4px 4px #e67e22; background: #fdcb6e;}
+    .shape9 {border-radius: 100% 0 100% 0; background: #2d3436;}
+    .shape10 {border-radius: 0 100% 0 100%; background: #c0392b;}
+    .shape11 {background: linear-gradient(45deg, #6dd5ed, #2193b0);}
+    .shape12 {background: linear-gradient(135deg, #ff9966, #ff5e62);}
+    .shape13 {background: linear-gradient(45deg, #7F00FF, #E100FF);}
+    .shape14 {border: double 3px #2980b9; background: #ecf0f1; color:#2c3e50;}
+    .shape15 {border: ridge 3px #27ae60; background: #bdc3c7; color:#2c3e50;}
+    .shape16 {transform: rotate(15deg); background: #e84393;}
+    .shape17 {transform: skewX(20deg); background: #fd79a8;}
+    .shape18 {transform: skewY(20deg); background: #55efc4;}
+    .shape19 {border-radius: 25% 75% 50% 50%; background: #ffeaa7; color:#2d3436;}
+    .shape20 {border-radius: 75% 25% 50% 50%; background: #fab1a0; color:#2d3436;}
+
+    /* ===== Center Mandala with Text ===== */
+    .center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ffdd59, #ffa801, #f39c12);
+      box-shadow: 0 0 40px rgba(243,156,18,0.9), inset 0 0 20px #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      font-size: 26px;
+      font-weight: bold;
+      color: #2d3436;
+      text-shadow: 2px 2px 12px #fff;
+      border: 6px double #d35400;
+      animation: glowCenter 3s infinite alternate;
+    }
+
+    @keyframes glowCenter {
+      from { box-shadow: 0 0 25px #f39c12, inset 0 0 10px #fff; }
+      to { box-shadow: 0 0 60px #ffa801, inset 0 0 20px #fff; }
+    }
+  </style>
+</head>
+<body>
+  <div class="rangoli">
+    <!-- Center Mandala -->
+    <div class="center">✨ Happy Deepawali ✨</div>
+
+    <!-- Auto-generate 400 shapes in circular rings -->
+    <script>
+      const rangoli = document.querySelector(".rangoli");
+      const totalShapes = 400;
+      const shapesPerRing = 40; // 10 rings × 40 shapes = 400
+      const centerX = 600, centerY = 600;
+      const radiusStep = 50;
+
+      for (let r = 1; r <= 10; r++) {
+        const radius = r * radiusStep;
+        for (let i = 0; i < shapesPerRing; i++) {
+          const angle = (i / shapesPerRing) * 2 * Math.PI;
+          const x = centerX + radius * Math.cos(angle) - 30;
+          const y = centerY + radius * Math.sin(angle) - 30;
+          const shapeNum = (i % 20) + 1;
+          const div = document.createElement("div");
+          div.className = `shape shape${shapeNum}`;
+          div.style.left = `${x}px`;
+          div.style.top = `${y}px`;
+          rangoli.appendChild(div);
+        }
+      }
+    </script>
+  </div>
+</body>
+</html>

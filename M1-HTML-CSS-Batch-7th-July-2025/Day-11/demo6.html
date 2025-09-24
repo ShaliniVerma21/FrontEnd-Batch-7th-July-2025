@@ -1,0 +1,175 @@
+<!--
+Demo 6: Professional Gradient Navigation Bar with Hover Effects and Dropdown
+Author: CSS Gradient Expert
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Gradient Navbar</title>
+  <style>
+    /* ================================
+       Global Styles
+    ================================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+    }
+
+    /* ================================
+       Navigation Bar Container
+       - Flex layout, gradient background, padding
+    ================================= */
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 40px;
+      background: linear-gradient(90deg, #ff7e5f, #feb47b);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    /* ================================
+       Logo Styling
+    ================================= */
+    .logo {
+      font-size: 1.8rem;
+      font-weight: bold;
+      color: white;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* ================================
+       Navigation Links
+       - Flex layout with gap
+       - Rounded hover effects with animated gradient
+    ================================= */
+    .nav-links {
+      display: flex;
+      gap: 25px;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      padding: 10px 20px;
+      border-radius: 8px;
+      transition: all 0.4s ease;
+      position: relative;
+    }
+
+    /* Hover effect: animated gradient background */
+    .nav-links a:hover {
+      background: linear-gradient(45deg, #ff6a00, #ee0979, #00c6ff, #0072ff);
+      background-size: 200% 200%;
+      animation: gradientMove 3s linear infinite;
+      transform: scale(1.05);
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ================================
+       Dropdown Menu
+    ================================= */
+    .dropdown {
+      position: relative;
+    }
+
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 45px;
+      left: 0;
+      background: linear-gradient(120deg, #1f4037, #99f2c8);
+      border-radius: 8px;
+      overflow: hidden;
+      min-width: 150px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+      z-index: 10;
+    }
+
+    .dropdown-content a {
+      display: block;
+      padding: 10px 20px;
+      color: white;
+      font-weight: normal;
+      transition: background 0.3s;
+    }
+
+    .dropdown-content a:hover {
+      background: rgba(255,255,255,0.2);
+    }
+
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+
+    /* ================================
+       Responsive Navbar
+    ================================= */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .nav-links {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .dropdown-content {
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================================
+       Navigation Bar
+  ================================= -->
+  <nav>
+    <!-- Logo -->
+    <div class="logo">ProLogo</div>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <!-- Dropdown Example -->
+      <div class="dropdown">
+        <a href="#">Portfolio &#9662;</a>
+        <div class="dropdown-content">
+          <a href="#">Web Design</a>
+          <a href="#">App Development</a>
+          <a href="#">UI/UX Design</a>
+        </div>
+      </div>
+      <a href="#">Contact</a>
+    </div>
+  </nav>
+
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!--
+Demo 4: Professional Gradient Buttons with Hover and Animated Effects
+Author: CSS Gradient Expert
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Gradient Buttons</title>
+  <style>
+    /* ================================
+       Global Styles
+    ================================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      min-height: 100vh;
+      background: #f0f0f0;
+      font-family: 'Arial', sans-serif;
+      padding: 20px;
+    }
+
+    /* ================================
+       Base Button Styling
+       - Padding, font, rounded corners
+       - Smooth transition for hover
+    ================================= */
+    .button {
+      padding: 15px 40px;
+      font-size: 1rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      color: white;
+      transition: transform 0.3s, box-shadow 0.3s, background 0.5s;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ================================
+       Linear Gradient Buttons
+    ================================= */
+    .linear1 {
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+    }
+
+    .linear2 {
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+    }
+
+    /* ================================
+       Radial Gradient Button
+    ================================= */
+    .radial1 {
+      background: radial-gradient(circle at center, #ff9a9e, #fad0c4);
+    }
+
+    /* ================================
+       Animated Gradient Button
+       - Smooth background movement
+    ================================= */
+    .animated-gradient {
+      background: linear-gradient(270deg, #ff6a00, #ee0979, #00c6ff, #0072ff);
+      background-size: 800% 800%;
+      animation: gradientMove 6s ease infinite;
+    }
+
+    @keyframes gradientMove {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ================================
+       Hover & Active Effects
+       - Scale, shadow, and click feedback
+    ================================= */
+    .button:hover {
+      transform: scale(1.1);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    .button:active {
+      transform: scale(0.95);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    /* ================================
+       Responsive Adjustments
+    ================================= */
+    @media (max-width: 768px) {
+      .button {
+        width: 80%;
+        text-align: center;
+        padding: 12px 25px;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- Linear Gradient Buttons -->
+  <button class="button linear1">Explore</button>
+  <button class="button linear2">Learn More</button>
+
+  <!-- Radial Gradient Button -->
+  <button class="button radial1">Get Started</button>
+
+  <!-- Animated Gradient Button -->
+  <button class="button animated-gradient">Professional UI</button>
+
+</body>
+
+</html>

@@ -1,0 +1,181 @@
+<!--
+Demo 10: Advanced Gradient Cards with Shadow, Hover, and Interactive Elements
+Author: Professional CSS Showcase
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Gradient Cards</title>
+  <style>
+    /* ================================
+       Global Styles
+    ================================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f5f5f5;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 100vh;
+      padding: 40px 20px;
+      gap: 40px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #333;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    /* ================================
+       Card Container
+    ================================= */
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+    }
+
+    /* ================================
+       Individual Card Styling
+    ================================= */
+    .card {
+      width: 250px;
+      height: 350px;
+      border-radius: 20px;
+      color: white;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px;
+      box-shadow: 0 15px 25px rgba(0, 0, 0, 0.2);
+      background: linear-gradient(135deg, #ff6a00, #ee0979);
+      transition: transform 0.5s ease, box-shadow 0.5s ease, background 0.5s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    /* ================================
+       Card Hover Effects
+    ================================= */
+    .card:hover {
+      transform: rotateY(10deg) scale(1.05);
+      box-shadow: 0 25px 45px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(135deg, #ff6a00, #ee0979, #ff9a9e);
+    }
+
+    /* ================================
+       Card Heading & Text
+    ================================= */
+    .card h3 {
+      font-size: 1.8rem;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 1rem;
+      margin-bottom: 20px;
+    }
+
+    /* ================================
+       Call-to-Action Button Inside Card
+    ================================= */
+    .card button {
+      padding: 10px 25px;
+      border: none;
+      border-radius: 8px;
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    /* ================================
+       Different Card Variants with Radial Gradient
+    ================================= */
+    .card.variant1 { background: radial-gradient(circle at top left, #ff9a9e, #fad0c4); }
+    .card.variant2 { background: radial-gradient(circle at bottom right, #a1c4fd, #c2e9fb); }
+    .card.variant3 { background: radial-gradient(circle at center, #f6d365, #fda085); }
+
+    /* ================================
+       Responsive Layout
+    ================================= */
+    @media (max-width: 900px) {
+      .card-container {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Advanced Gradient Cards Showcase</h1>
+
+  <!-- ================================
+       Card Section
+  ================================= -->
+  <div class="card-container">
+
+    <!-- Card 1: Linear Gradient -->
+    <div class="card">
+      <h3>Design Excellence</h3>
+      <p>Linear gradient with 3D hover animation</p>
+      <button>Explore</button>
+    </div>
+
+    <!-- Card 2: Linear Gradient Variant -->
+    <div class="card" style="background: linear-gradient(135deg, #00c6ff, #0072ff);">
+      <h3>Interactive UI</h3>
+      <p>Smooth gradient transition on hover</p>
+      <button>Learn More</button>
+    </div>
+
+    <!-- Card 3: Radial Gradient -->
+    <div class="card variant1">
+      <h3>Creative Radial</h3>
+      <p>Radial gradient with bright color overlay</p>
+      <button>Discover</button>
+    </div>
+
+    <!-- Card 4: Radial Gradient -->
+    <div class="card variant2">
+      <h3>Modern Aesthetic</h3>
+      <p>Radial gradient design for modern UI</p>
+      <button>View</button>
+    </div>
+
+    <!-- Card 5: Animated Gradient -->
+    <div class="card variant3">
+      <h3>Vibrant Experience</h3>
+      <p>Radial gradient with smooth color flow</p>
+      <button>Get Started</button>
+    </div>
+
+  </div>
+
+</body>
+
+</html>

@@ -1,0 +1,136 @@
+<!--
+Demo 3: Professional Gradient Hero Banner with Call-to-Action
+Author: CSS Gradient Expert
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Gradient Hero Banner</title>
+  <style>
+    /* ================================
+       Global Styles
+    ================================= */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      font-family: 'Arial', sans-serif;
+      height: 100%;
+    }
+
+    /* ================================
+       Hero Banner Container
+       - Full viewport height
+       - Flex center alignment
+       - Linear gradient background with overlay
+    ================================= */
+    .hero-banner {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: white;
+      position: relative;
+      background: linear-gradient(135deg, #667eea, #764ba2, #ff6a00);
+      background-size: 400% 400%;
+      animation: gradientShift 15s ease infinite;
+      padding: 20px;
+    }
+
+    /* Animated gradient background */
+    @keyframes gradientShift {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    /* ================================
+       Hero Banner Text
+       - Large heading
+       - Subheading
+       - Spacing and responsive font size
+    ================================= */
+    .hero-banner h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+      line-height: 1.2;
+    }
+
+    .hero-banner p {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+    }
+
+    /* ================================
+       Call-to-Action Buttons
+       - Gradient buttons with hover effects
+    ================================= */
+    .hero-banner .buttons {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .hero-banner .btn {
+      padding: 15px 35px;
+      font-size: 1rem;
+      font-weight: bold;
+      border: none;
+      border-radius: 8px;
+      text-transform: uppercase;
+      cursor: pointer;
+      color: white;
+      background: linear-gradient(45deg, #ff6a00, #ee0979);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .hero-banner .btn:hover {
+      transform: scale(1.1);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+    }
+
+    /* ================================
+       Responsive Styling
+    ================================= */
+    @media (max-width: 768px) {
+      .hero-banner h1 {
+        font-size: 2.5rem;
+      }
+      .hero-banner p {
+        font-size: 1.2rem;
+      }
+      .hero-banner .btn {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ================================
+       Hero Banner Section
+  ================================= -->
+  <section class="hero-banner">
+    <div>
+      <h1>Welcome to Gradient World</h1>
+      <p>Professional Web Design with Modern CSS Gradients</p>
+      <div class="buttons">
+        <button class="btn">Get Started</button>
+        <button class="btn" style="background: linear-gradient(45deg, #00c6ff, #0072ff);">Learn More</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+
+</html>

@@ -1,0 +1,148 @@
+<!--
+Demo 7: Professional Gradient Background Sections with Interactive Content
+Author: CSS Gradient Expert
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gradient Sections</title>
+  <style>
+    /* ================================
+       Global Styles
+    ================================= */
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    /* ================================
+       Section Base Styling
+       - Height, flex layout, center content
+       - Text styling
+    ================================= */
+    section {
+      min-height: 70vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: bold;
+      padding: 40px 20px;
+      transition: transform 0.5s ease, opacity 0.5s ease;
+    }
+
+    section:hover {
+      transform: scale(1.02);
+      opacity: 0.95;
+    }
+
+    section h2 {
+      font-size: 2.5rem;
+      margin-bottom: 15px;
+    }
+
+    section p {
+      font-size: 1.2rem;
+      margin-bottom: 25px;
+      max-width: 600px;
+    }
+
+    section button {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      color: white;
+      background: rgba(255, 255, 255, 0.2);
+      transition: background 0.3s, transform 0.3s;
+    }
+
+    section button:hover {
+      background: rgba(255, 255, 255, 0.4);
+      transform: scale(1.05);
+    }
+
+    /* ================================
+       Gradient Variants for Sections
+    ================================= */
+    #section1 {
+      background: linear-gradient(120deg, #ff512f, #dd2476);
+    }
+
+    #section2 {
+      background: linear-gradient(120deg, #1f4037, #99f2c8);
+    }
+
+    #section3 {
+      background: radial-gradient(circle at top left, #4776e6, #8e54e9);
+    }
+
+    #section4 {
+      background: radial-gradient(circle at bottom right, #ff758c, #ff7eb3);
+    }
+
+    /* ================================
+       Responsive Styling
+    ================================= */
+    @media (max-width: 768px) {
+      section {
+        font-size: 1.5rem;
+      }
+      section h2 {
+        font-size: 2rem;
+      }
+      section p {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Section 1: Introduction -->
+  <section id="section1">
+    <h2>Welcome to Our Platform</h2>
+    <p>Experience professional designs using smooth gradient backgrounds and modern UI elements.</p>
+    <button>Get Started</button>
+  </section>
+
+  <!-- Section 2: Services -->
+  <section id="section2">
+    <h2>Our Services</h2>
+    <p>We provide web design, development, and digital marketing services with a focus on creativity and quality.</p>
+    <button>Explore Services</button>
+  </section>
+
+  <!-- Section 3: Portfolio -->
+  <section id="section3">
+    <h2>Portfolio Highlights</h2>
+    <p>Check out our recent projects that showcase our expertise in creating visually stunning interfaces.</p>
+    <button>View Portfolio</button>
+  </section>
+
+  <!-- Section 4: Contact -->
+  <section id="section4">
+    <h2>Contact Us</h2>
+    <p>Get in touch for collaborations or inquiries. Let’s build something amazing together!</p>
+    <button>Contact Now</button>
+  </section>
+
+</body>
+
+</html>
