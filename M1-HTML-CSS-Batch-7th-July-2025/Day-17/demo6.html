@@ -1,0 +1,118 @@
+<!--
+Program 6: Professional Mark & Time Example
+Semantic Tags Used: header, main, section, article, mark, time, footer
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mark & Time Example</title>
+  <style>
+    /* -------------------------------
+       General Page Styling
+    ---------------------------------*/
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 40px;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    h1, h2 {
+      text-align: center;
+      color: #007acc;
+      margin-bottom: 20px;
+    }
+
+    /* -------------------------------
+       Notice Box Styling
+    ---------------------------------*/
+    .notice {
+      background: #fff;
+      border: 2px solid #007acc;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      max-width: 650px;
+      margin: 20px auto;
+      transition: transform 0.3s, background 0.3s;
+    }
+    .notice:hover {
+      transform: translateY(-3px);
+      background: #f0f8ff;
+    }
+
+    /* Highlight important text */
+    mark {
+      background: #ffeb3b;
+      color: #000;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-weight: bold;
+    }
+
+    /* Time styling */
+    time {
+      font-weight: bold;
+      color: #d9534f;
+      font-size: 1.05em;
+    }
+
+    /* -------------------------------
+       Footer Styling
+    ---------------------------------*/
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      font-size: 0.9rem;
+      color: #555;
+    }
+
+    /* -------------------------------
+       Responsive Styling
+    ---------------------------------*/
+    @media (max-width: 600px) {
+      body { margin: 20px; }
+      .notice { padding: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>📢 Important Notices</h1>
+    <p style="text-align:center; color:#555;">Keep track of important events and deadlines</p>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Notice Section -->
+    <section>
+      <article class="notice">
+        <header>
+          <h2>Exam Schedule</h2>
+        </header>
+        <p>
+          The <mark>exam date</mark> is scheduled for 
+          <time datetime="2025-12-01T09:00">1st December 2025, 9:00 AM</time>.
+        </p>
+        <p>
+          Please arrive at least <mark>30 minutes early</mark> to complete the registration process.
+        </p>
+        <footer>
+          <p><small>Stay updated to avoid any last-minute issues.</small></p>
+        </footer>
+      </article>
+    </section>
+  </main>
+
+  <!-- Page Footer -->
+  <footer>
+    <p>&copy; 2025 Notice Board | Designed with ❤️ using HTML5 & CSS3</p>
+  </footer>
+
+</body>
+</html>

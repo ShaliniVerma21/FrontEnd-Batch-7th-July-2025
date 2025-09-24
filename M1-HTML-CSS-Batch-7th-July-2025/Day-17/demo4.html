@@ -1,0 +1,178 @@
+<!--
+Program 4: Enhanced Aside with Professional Blog Layout
+Semantic Tags Used: header, nav, main, section, article, aside, footer
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aside Example - Professional Blog</title>
+  <style>
+    /* -------------------------------
+       Reset default styles
+    ---------------------------------*/
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background: #f4f7fa;
+      color: #333;
+    }
+
+    /* -------------------------------
+       Header Styling
+    ---------------------------------*/
+    header {
+      background: #007acc;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 { margin-bottom: 5px; font-size: 2rem; }
+    header p { font-size: 1rem; color: #e0e0e0; }
+
+    /* -------------------------------
+       Navigation Bar
+    ---------------------------------*/
+    nav {
+      background: #005f99;
+      text-align: center;
+      padding: 12px;
+    }
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ffeb3b; }
+
+    /* -------------------------------
+       Container & Layout
+    ---------------------------------*/
+    .container {
+      display: flex;
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+      gap: 20px;
+    }
+
+    main {
+      flex: 3;
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, background 0.3s;
+    }
+    main:hover { transform: translateY(-3px); }
+
+    main h2 { color: #007acc; margin-bottom: 15px; }
+    main p { margin-bottom: 15px; }
+
+    /* -------------------------------
+       Aside / Sidebar Styling
+    ---------------------------------*/
+    aside {
+      flex: 1;
+      background: #fafafa;
+      padding: 20px;
+      border-left: 3px solid #007acc;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s, background 0.3s;
+    }
+    aside:hover { transform: translateY(-3px); background: #f0f8ff; }
+
+    aside h3 { margin-bottom: 15px; color: #007acc; }
+    aside ul { list-style: none; }
+    aside ul li { margin-bottom: 10px; }
+    aside ul li a {
+      display: block;
+      padding: 6px 8px;
+      border-radius: 5px;
+      color: #333;
+      text-decoration: none;
+      transition: background 0.3s, color 0.3s;
+    }
+    aside ul li a:hover { background: #007acc; color: white; }
+
+    /* -------------------------------
+       Footer Styling
+    ---------------------------------*/
+    footer {
+      text-align: center;
+      padding: 20px;
+      margin-top: 30px;
+      background: #222;
+      color: white;
+      font-size: 0.9rem;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* -------------------------------
+       Responsive Design
+    ---------------------------------*/
+    @media (max-width: 768px) {
+      .container { flex-direction: column; }
+      aside { margin-left: 0; margin-top: 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>My Tech Blog</h1>
+    <p>Sharing knowledge about web development</p>
+  </header>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Articles</a>
+    <a href="#">Tutorials</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Main Container -->
+  <div class="container">
+
+    <!-- Main Content Area -->
+    <main>
+      <section>
+        <h2>Main Content</h2>
+        <p>This is the main article area where blog posts, tutorials, or guides are displayed. Using semantic tags like <code>&lt;main&gt;</code> and <code>&lt;section&gt;</code> enhances accessibility and SEO.</p>
+        <p>Each article or post can be wrapped in <code>&lt;article&gt;</code> for better structure.</p>
+      </section>
+      <article>
+        <h3>Sample Article</h3>
+        <p>This article demonstrates a semantic layout with <code>&lt;article&gt;</code> and <code>&lt;aside&gt;</code> working together to create a professional blog layout.</p>
+      </article>
+    </main>
+
+    <!-- Sidebar / Aside -->
+    <aside>
+      <h3>Related Links</h3>
+      <ul>
+        <li><a href="#">📘 HTML5 Guide</a></li>
+        <li><a href="#">🎨 CSS3 Basics</a></li>
+        <li><a href="#">⚡ JavaScript Intro</a></li>
+        <li><a href="#">🌐 Responsive Design</a></li>
+      </ul>
+    </aside>
+
+  </div>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>&copy; 2025 My Tech Blog | Designed with ❤️ using HTML5 & CSS3</p>
+  </footer>
+
+</body>
+</html>

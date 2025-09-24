@@ -1,0 +1,156 @@
+<!--
+Program 3: Enhanced Figure & Figcaption Gallery
+Semantic Tags Used: header, main, section, figure, figcaption, footer
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Figure & Figcaption Example</title>
+  <style>
+    /* -------------------------------
+       Reset default styles
+    ---------------------------------*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Tahoma, sans-serif;
+      background: #f4f7fa;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* -------------------------------
+       Header Styling
+    ---------------------------------*/
+    header {
+      background: #007acc;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 2rem; }
+
+    /* -------------------------------
+       Main Content Styling
+    ---------------------------------*/
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    main h2 {
+      text-align: center;
+      margin-bottom: 30px;
+      color: #007acc;
+    }
+
+    /* -------------------------------
+       Gallery Section
+    ---------------------------------*/
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    figure {
+      background: #fff;
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    figure:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+
+    figure img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: transform 0.3s;
+    }
+
+    figure img:hover { transform: scale(1.05); }
+
+    figcaption {
+      font-style: italic;
+      font-size: 0.9em;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    /* -------------------------------
+       Footer Styling
+    ---------------------------------*/
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #222;
+      color: white;
+      margin-top: 40px;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* -------------------------------
+       Responsive Design
+    ---------------------------------*/
+    @media (max-width: 600px) {
+      main { padding: 0 10px; }
+      .gallery { gap: 15px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>Nature Photography Showcase</h1>
+    <p>Capturing the beauty of the natural world</p>
+  </header>
+
+  <!-- Main Content Area -->
+  <main>
+    <!-- Gallery Section -->
+    <section aria-label="Photo Gallery">
+      <h2>Beautiful Captures</h2>
+      <div class="gallery">
+        <!-- First Image -->
+        <figure>
+          <img src="https://picsum.photos/id/1018/600/400" alt="Mountain Landscape">
+          <figcaption>A stunning mountain landscape captured during sunset.</figcaption>
+        </figure>
+
+        <!-- Second Image -->
+        <figure>
+          <img src="https://picsum.photos/id/1025/600/400" alt="Wildlife Photography">
+          <figcaption>A majestic eagle soaring above the valley.</figcaption>
+        </figure>
+
+        <!-- Third Image -->
+        <figure>
+          <img src="https://picsum.photos/id/1015/600/400" alt="Forest Path">
+          <figcaption>A peaceful forest pathway covered in autumn leaves.</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!-- Page Footer -->
+  <footer>
+    <p>&copy; 2025 Nature Photography Gallery | Designed with ❤️ using HTML5 & CSS3</p>
+  </footer>
+
+</body>
+</html>

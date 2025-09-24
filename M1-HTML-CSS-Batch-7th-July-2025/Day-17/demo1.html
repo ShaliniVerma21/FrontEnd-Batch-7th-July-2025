@@ -1,0 +1,152 @@
+<!--
+Program 1: Basic Semantic Structure with Professional Styling
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Semantic Layout - Professional</title>
+  <style>
+    /* Reset default margins */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f9f9f9;
+    }
+
+    /* Header with hero style */
+    header {
+      background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
+                  url("https://picsum.photos/1200/300?blur=2") no-repeat center/cover;
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 1.2rem;
+      opacity: 0.9;
+    }
+
+    /* Navigation */
+    nav {
+      background: #222;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      padding: 12px;
+    }
+
+    nav a {
+      color: #f5f5f5;
+      margin: 8px 15px;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s, border-bottom 0.3s;
+      border-bottom: 2px solid transparent;
+    }
+
+    nav a:hover {
+      color: #ff9800;
+      border-bottom: 2px solid #ff9800;
+    }
+
+    /* Main content */
+    main {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    main h2 {
+      margin-bottom: 15px;
+      color: #007acc;
+    }
+
+    main p {
+      font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      background: #111;
+      color: #ccc;
+      text-align: center;
+      padding: 20px 10px;
+      margin-top: 40px;
+    }
+
+    footer p {
+      margin-bottom: 10px;
+    }
+
+    footer .social a {
+      color: #ccc;
+      margin: 0 10px;
+      font-size: 1.2rem;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    footer .social a:hover {
+      color: #ff9800;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header contains site logo or title -->
+  <header>
+    <h1>My Portfolio</h1>
+    <p>Web Developer & Designer</p>
+  </header>
+
+  <!-- Navigation bar -->
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Projects</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+
+  <!-- Main content -->
+  <main>
+    <h2>Welcome</h2>
+    <p>
+      This webpage demonstrates the use of core semantic elements:
+      <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>,
+      <code>&lt;main&gt;</code>, and <code>&lt;footer&gt;</code>.
+    </p>
+    <p>
+      Semantic HTML5 tags improve readability, accessibility, and SEO by giving
+      meaning to the structure of a webpage instead of just using generic
+      <code>&lt;div&gt;</code> elements.
+    </p>
+  </main>
+
+  <!-- Footer section -->
+  <footer>
+    <p>&copy; 2025 My Portfolio. All rights reserved.</p>
+    <div class="social">
+      <a href="#" title="Twitter">&#x1F426;</a>
+      <a href="#" title="LinkedIn">&#128188;</a>
+      <a href="#" title="GitHub">&#128187;</a>
+    </div>
+  </footer>
+</body>
+</html>

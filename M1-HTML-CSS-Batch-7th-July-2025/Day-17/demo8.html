@@ -1,0 +1,182 @@
+<!--
+Program 8: Enhanced Portfolio Page
+Semantic Tags Used: header, nav, main, section, figure, figcaption, article, footer
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shalini Verma Portfolio</title>
+  <style>
+    /* Reset default browser styles */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      background: #f9f9f9;
+      color: #333;
+    }
+
+    /* Header */
+    header {
+      background: #111;
+      color: white;
+      text-align: center;
+      padding: 25px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+    header h1 { font-size: 2.2rem; margin-bottom: 5px; }
+    header p { font-size: 1rem; color: #ccc; margin-bottom: 15px; }
+
+    /* Navigation */
+    nav a {
+      margin: 0 12px;
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ffeb3b; }
+
+    /* Main Content */
+    main {
+      max-width: 1000px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 40px;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, background 0.3s;
+    }
+    section:hover { transform: translateY(-3px); background: #f0f8ff; }
+
+    section h2 { color: #007acc; margin-bottom: 15px; }
+    section p { font-size: 1rem; }
+
+    /* Articles for multiple projects or work experience */
+    article {
+      margin-bottom: 25px;
+      padding: 15px;
+      background: #fafafa;
+      border-radius: 8px;
+      border-left: 4px solid #007acc;
+      transition: transform 0.3s, background 0.3s;
+    }
+    article:hover { transform: translateY(-3px); background: #e6f2ff; }
+
+    /* Project Figure */
+    figure {
+      margin: 20px auto;
+      text-align: center;
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+    }
+    figure:hover { transform: translateY(-5px); }
+    figure img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: 10px;
+    }
+    figcaption {
+      margin-top: 10px;
+      font-style: italic;
+      color: #555;
+      font-size: 0.95rem;
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      background: #111;
+      color: white;
+      padding: 20px;
+      margin-top: 40px;
+      box-shadow: 0 -2px 5px rgba(0,0,0,0.1);
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+      section { padding: 15px; }
+      figure img { max-width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header>
+    <h1>Shalini Verma</h1>
+    <p>Full Stack Developer & Designer</p>
+    <!-- Navigation -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Projects</a>
+      <a href="#">Experience</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- About Me Section -->
+    <section>
+      <h2>About Me</h2>
+      <p>I specialize in building professional websites and applications using modern web technologies such as HTML5, CSS3, JavaScript, and frameworks like React and Node.js. My focus is on clean design, responsive layouts, and seamless user experience.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section>
+      <h2>Projects</h2>
+      
+      <!-- Single Project as Article -->
+      <article>
+        <h3>E-commerce Website</h3>
+        <figure>
+          <img src="https://picsum.photos/300/200" alt="E-commerce Project">
+          <figcaption>Responsive and interactive online store built with React and Node.js</figcaption>
+        </figure>
+        <p>Developed a full-stack e-commerce platform with product catalog, shopping cart, and payment integration.</p>
+      </article>
+
+      <article>
+        <h3>Portfolio Website</h3>
+        <figure>
+          <img src="https://picsum.photos/301/200" alt="Portfolio Project">
+          <figcaption>Personal portfolio site showcasing projects and skills</figcaption>
+        </figure>
+        <p>Designed and developed a responsive portfolio website to showcase my work and professional skills.</p>
+      </article>
+    </section>
+
+    <!-- Experience Section -->
+    <section>
+      <h2>Experience</h2>
+      <article>
+        <h3>Full Stack Developer - XYZ Corp</h3>
+        <p>Worked on web applications using MERN stack, enhancing user experience and performance optimization.</p>
+      </article>
+      <article>
+        <h3>UI/UX Designer - ABC Studio</h3>
+        <p>Created modern, responsive designs and interactive prototypes for clients’ websites and apps.</p>
+      </article>
+    </section>
+  </main>
+
+  <!-- Footer Section -->
+  <footer>
+    <p>© 2025 Shalini Verma | Designed with ❤️ using HTML5 & CSS3</p>
+  </footer>
+
+</body>
+</html>

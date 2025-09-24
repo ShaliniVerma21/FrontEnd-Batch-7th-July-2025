@@ -1,0 +1,196 @@
+<!--
+Program 10: Complete Semantic Landing Page (Enhanced)
+Semantic Tags Used: header, nav, main, section, article, details, summary, mark, time, footer, aside, figure, figcaption
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Startup X - Landing Page</title>
+  <style>
+    /* Reset */
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    /* Body */
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 20px;
+    }
+    header h1 { font-size: 2.5rem; margin-bottom: 5px; }
+    header p { font-size: 1.1rem; color: #ccc; margin-bottom: 15px; }
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover { color: #ffeb3b; }
+
+    /* Main */
+    main {
+      max-width: 1200px;
+      margin: 30px auto;
+      padding: 0 20px;
+    }
+
+    /* Sections */
+    section {
+      margin-bottom: 40px;
+    }
+    section h2 {
+      color: #007acc;
+      margin-bottom: 15px;
+      font-size: 1.8rem;
+    }
+    section p { font-size: 1rem; }
+    mark { background: #ffeb3b; padding: 2px 5px; border-radius: 3px; }
+
+    /* Articles */
+    article {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+      transition: transform 0.3s, background 0.3s;
+    }
+    article:hover {
+      transform: translateY(-5px);
+      background: #f0f8ff;
+    }
+    article h3 { color: #007acc; margin-bottom: 10px; }
+    article p time { font-weight: bold; color: #555; }
+
+    /* Details & Summary */
+    details {
+      background: #fafafa;
+      padding: 15px;
+      border-radius: 8px;
+      border: 1px solid #ddd;
+      cursor: pointer;
+      margin-bottom: 30px;
+      transition: background 0.3s;
+    }
+    details[open] { background: #f0f8ff; }
+    summary {
+      font-weight: bold;
+      font-size: 1.1rem;
+      outline: none;
+    }
+
+    /* Aside */
+    aside {
+      background: #e8f4ff;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    aside h3 { color: #007acc; margin-bottom: 10px; }
+
+    /* Figure & Figcaption */
+    figure { text-align: center; margin: 20px 0; }
+    figcaption { font-style: italic; color: #555; font-size: 0.9rem; }
+    figure img { width: 100%; max-width: 400px; border-radius: 10px; }
+
+    /* Footer */
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      header h1 { font-size: 2rem; }
+      section h2 { font-size: 1.5rem; }
+      figure img { width: 100%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Page Header -->
+  <header>
+    <h1>Startup X</h1>
+    <p>Innovating the Future</p>
+
+    <!-- Navigation Bar -->
+    <nav>
+      <a href="#">Home</a>
+      <a href="#">Services</a>
+      <a href="#">Team</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+
+    <!-- Vision Section -->
+    <section>
+      <h2>Our Vision</h2>
+      <p>We aim to transform industries with <mark>cutting-edge technology</mark> and AI-driven solutions.</p>
+    </section>
+
+    <!-- Product & Success Section -->
+    <section>
+      <!-- AI Products Article -->
+      <article>
+        <h3>AI Products</h3>
+        <p>Launching in <time datetime="2025-11-01">November 2025</time>, our AI platform will redefine automation and workflows.</p>
+      </article>
+
+      <!-- Customer Success Article -->
+      <article>
+        <h3>Customer Success</h3>
+        <p>We prioritize customer experience by building scalable and reliable solutions for real-world problems.</p>
+      </article>
+    </section>
+
+    <!-- Team Introduction Section -->
+    <section>
+      <h2>Meet Our Team</h2>
+      <aside>
+        <h3>Key Members</h3>
+        <ul>
+          <li>Shalini Verma - CEO & Founder</li>
+          <li>Rahul Mehta - CTO</li>
+          <li>Kavita Sharma - Lead Developer</li>
+        </ul>
+      </aside>
+      <figure>
+        <img src="https://picsum.photos/400/250" alt="Team Photo">
+        <figcaption>Our innovative team at Startup X headquarters.</figcaption>
+      </figure>
+    </section>
+
+    <!-- More About Us -->
+    <details>
+      <summary>More About Us</summary>
+      <p>Founded in 2020, Startup X has grown into a global innovation hub with experts driving impactful solutions worldwide.</p>
+    </details>
+
+  </main>
+
+  <!-- Page Footer -->
+  <footer>
+    <p>© 2025 Startup X. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

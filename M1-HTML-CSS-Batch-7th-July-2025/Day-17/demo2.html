@@ -1,0 +1,241 @@
+<!--
+Program 2: Enhanced Article & Section Layout with Responsive Blog Styling
+Semantic Tags Used: header, nav, main, article, section, aside, time, footer
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Article & Section Example</title>
+  <style>
+    /* -------------------------------
+       Reset default styles
+    ---------------------------------*/
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Georgia", serif;
+      background: #f4f4f9;
+      color: #333;
+      line-height: 1.8;
+    }
+
+    /* -------------------------------
+       Global Site Header
+    ---------------------------------*/
+    header.site-header {
+      background: #007acc;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    header.site-header h1 {
+      font-size: 2rem;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 12px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: opacity 0.3s;
+    }
+
+    nav a:hover { opacity: 0.8; }
+
+    /* -------------------------------
+       Main Layout
+    ---------------------------------*/
+    main {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 20px;
+      max-width: 1100px;
+      margin: 30px auto;
+      padding: 0 15px;
+    }
+
+    /* -------------------------------
+       Article Styling
+    ---------------------------------*/
+    article {
+      background: #fff;
+      padding: 25px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      border-left: 6px solid #007acc;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    article:hover { 
+      transform: translateY(-5px); 
+      background: #f0f8ff;
+    }
+
+    article header {
+      margin-bottom: 20px;
+      border-bottom: 1px solid #ddd;
+      padding-bottom: 10px;
+    }
+
+    article header h2 { font-size: 2rem; color: #007acc; }
+
+    article header time {
+      font-size: 0.9rem;
+      color: #666;
+      background: #eef6fb;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    section {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: #fafafa;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    section:hover { background: #f0f8ff; }
+
+    section h3 {
+      margin-bottom: 8px;
+      color: #444;
+    }
+
+    article footer {
+      margin-top: 20px;
+      border-top: 1px solid #ddd;
+      padding-top: 10px;
+      text-align: right;
+      font-size: 0.95rem;
+      color: #555;
+    }
+
+    article footer strong { color: #000; }
+
+    /* -------------------------------
+       Sidebar Styling
+    ---------------------------------*/
+    aside {
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    aside:hover { transform: translateY(-3px); background: #f0f8ff; }
+
+    aside h3 { margin-bottom: 15px; color: #007acc; }
+
+    aside ul { list-style: none; }
+
+    aside ul li { margin-bottom: 12px; }
+
+    aside ul li a {
+      text-decoration: none;
+      color: #444;
+      transition: color 0.3s;
+    }
+
+    aside ul li a:hover { color: #007acc; }
+
+    /* -------------------------------
+       Responsive Design
+    ---------------------------------*/
+    @media (max-width: 768px) {
+      main { grid-template-columns: 1fr; }
+      header.site-header h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- =========================
+       Site Header
+       Includes navigation
+  ============================ -->
+  <header class="site-header">
+    <h1>Shalini's Blog</h1>
+    <nav aria-label="Primary Navigation">
+      <a href="#">Home</a>
+      <a href="#">Articles</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <!-- =========================
+       Main Content Area
+  ============================ -->
+  <main>
+    <!-- Article Section -->
+    <article>
+      <!-- Article Header -->
+      <header>
+        <h2>Benefits of Learning HTML5</h2>
+        <p>Published on <time datetime="2025-09-24">September 24, 2025</time></p>
+      </header>
+
+      <!-- Article Sections -->
+      <section>
+        <h3>1. Improved Semantics</h3>
+        <p>
+          HTML5 introduces semantic tags like 
+          <code>&lt;article&gt;</code>, 
+          <code>&lt;section&gt;</code>, and 
+          <code>&lt;aside&gt;</code>, 
+          making the code more meaningful and readable.
+        </p>
+      </section>
+
+      <section>
+        <h3>2. Accessibility</h3>
+        <p>
+          Screen readers and search engines better understand the structure 
+          of web pages when semantic elements are properly used.
+        </p>
+      </section>
+
+      <section>
+        <h3>3. Multimedia Support</h3>
+        <p>
+          HTML5 allows embedding of videos and audio natively without 
+          requiring external plugins, simplifying media integration.
+        </p>
+      </section>
+
+      <!-- Article Footer -->
+      <footer>
+        <p>Written by <strong>Shalini Verma</strong></p>
+      </footer>
+    </article>
+
+    <!-- Sidebar / Related Posts -->
+    <aside aria-label="Related Posts">
+      <h3>Related Posts</h3>
+      <ul>
+        <li><a href="#">Top 10 HTML5 Features</a></li>
+        <li><a href="#">CSS Tricks for Beginners</a></li>
+        <li><a href="#">Responsive Design Basics</a></li>
+        <li><a href="#">Web Accessibility Guide</a></li>
+      </ul>
+    </aside>
+  </main>
+</body>
+</html>
