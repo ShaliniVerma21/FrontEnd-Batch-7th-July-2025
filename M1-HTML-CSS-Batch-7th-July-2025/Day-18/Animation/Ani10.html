@@ -1,0 +1,91 @@
+<!-- Program 4: Professional Text Typing Animation (Hero Section Effect) -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Typing Text Animation</title>
+
+<style>
+/* 🌆 Basic Page Setup */
+body {
+  display: flex;                          /* Centers the text both vertically & horizontally */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);  /* Gradient background for professional look */
+  color: #00e0ff;
+  font-family: 'Courier New', monospace;
+  font-size: 28px;
+  overflow: hidden;
+}
+
+/* ✨ Typing Animation Text Style */
+.typing {
+  border-right: 3px solid #00e0ff;        /* Cursor effect */
+  white-space: nowrap;                    /* Prevents line break */
+  overflow: hidden;                       /* Hides text beyond the animation width */
+  width: 0;                               /* Start width from 0 to simulate typing */
+  
+  /* 🎬 Animation combining multiple effects */
+  animation: 
+    typing 4s steps(25, end) forwards,    /* Typing effect (once) */
+    blink 0.7s step-end infinite alternate, /* Cursor blinking continuously */
+    colorShift 6s ease-in-out infinite alternate, /* Smooth text color transition */
+    fadeIn 2s ease-in-out 0.5s 1 normal forwards; /* Smooth entry effect */
+  
+  /* 🧭 Animation Properties Used */
+  animation-delay: 0s, 4s, 6s, 0s;         /* Different delay timings for each animation */
+  animation-direction: normal, alternate, alternate, normal;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1, infinite, infinite, 1;
+  animation-play-state: running;
+  animation-timing-function: steps(25, end), step-end, ease-in-out, ease-in-out;
+}
+
+/* 🧩 Keyframe 1: Typing Effect */
+@keyframes typing {
+  from { width: 0; }                      /* Start hidden */
+  to { width: 24ch; }                     /* Reveal full text (24 characters long) */
+}
+
+/* 🧩 Keyframe 2: Blinking Cursor */
+@keyframes blink {
+  0%, 100% { border-color: #00e0ff; }     /* Cursor visible */
+  50% { border-color: transparent; }      /* Cursor invisible */
+}
+
+/* 🧩 Keyframe 3: Text Color Gradient Effect */
+@keyframes colorShift {
+  0% { color: #00e0ff; text-shadow: 0 0 10px #00e0ff; }
+  50% { color: #00ffa3; text-shadow: 0 0 20px #00ffa3; }
+  100% { color: #00e0ff; text-shadow: 0 0 10px #00e0ff; }
+}
+
+/* 🧩 Keyframe 4: Smooth Fade In */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+/* 🪶 Additional Styling for Professional Look */
+h1 {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #9ca3af;
+  text-align: center;
+  letter-spacing: 1px;
+  animation: fadeIn 2s ease-in-out 1s 1 forwards;
+}
+</style>
+</head>
+<body>
+
+  <!-- 💬 Typing Text Effect -->
+  <div>
+    <div class="typing">I’m a Full Stack Developer.</div>
+    <h1>Design • Code • Deploy • Inspire</h1>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!-- 
+  Program: Multi-step CSS Color Animation
+  Description: Demonstrates using @keyframes to create a smooth 
+  color transition with multiple stages for a div element.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-step Color Animation</title>
+
+    <style>
+        /* 
+          Styling the animated div element:
+          - Setting fixed width and height
+          - Initial background color
+          - Applying animation properties
+        */
+        div {
+          width: 100px;               /* Width of the box */
+          height: 100px;              /* Height of the box */
+          background-color: black;    /* Initial color before animation starts */
+          
+          /* Animation Properties */
+          animation-name: example;    /* Name of the keyframes to apply */
+          animation-duration: 9s;     /* Total duration of one animation cycle */
+          /* You can add optional properties like:
+             animation-iteration-count: infinite;
+             animation-delay: 1s;
+             animation-direction: alternate;
+             animation-timing-function: ease-in-out; */
+        }
+
+        /* 
+          Defining the keyframes for the animation:
+          - Multiple stages using percentages
+          - Allows smooth transition between multiple colors
+        */
+        @keyframes example {
+          0%   { background-color: red; }      /* Starting color */
+          25%  { background-color: yellow; }   /* 1/4th into the animation */
+          50%  { background-color: blue; }     /* Halfway through */
+          100% { background-color: green; }    /* End color */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The animated div box -->
+    <div></div>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!-- 
+Program 3: Smooth Card Hover Animation (Extended Version)
+---------------------------------------------------------
+Purpose:
+To demonstrate advanced card hover animation using CSS transitions and keyframes 
+with all animation properties.
+
+Concept:
+- Card with smooth entrance animation (fade-in + rise).
+- Image zooms slightly on hover.
+- Card glows subtly with a rotating gradient border animation.
+- Includes all key CSS animation properties for learning and professional presentation.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Smooth Card Hover Animation - Extended</title>
+
+<style>
+/* -------------------- GLOBAL PAGE STYLES -------------------- */
+body {
+  background: linear-gradient(135deg, #e3f2fd, #eef2f3);  /* Soft gradient background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+}
+
+/* -------------------- CARD CONTAINER -------------------- */
+.card {
+  width: 320px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #ffffff;
+  position: relative;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transform: translateY(50px); /* Start lower for entry animation */
+  opacity: 0; /* Hidden before fade-in */
+  
+  /* ---------- Entry animation ---------- */
+  animation-name: fadeRise;             /* Custom keyframes */
+  animation-duration: 1.2s;             /* Time to complete entrance */
+  animation-delay: 0.2s;                /* Delay before appearing */
+  animation-timing-function: ease-out;  /* Smooth deceleration */
+  animation-iteration-count: 1;         /* Runs once */
+  animation-direction: normal;          /* Forwards direction */
+  animation-play-state: running;        /* Active by default */
+  animation-fill-mode: forwards;        /* Retain final state (visible & raised) */
+  animation-composition: replace;       /* Overrides other potential animations */
+}
+
+/* -------------------- CARD GRADIENT BORDER -------------------- */
+.card::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  z-index: 0;
+  border-radius: 22px;
+  background: linear-gradient(45deg, #00ccff, #9933ff, #ff3399, #00ff99);
+  background-size: 300%;
+  filter: blur(6px);
+  opacity: 0.3;
+  
+  /* ---------- Border animation ---------- */
+  animation-name: gradientFlow;
+  animation-duration: 6s;
+  animation-delay: 0s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-play-state: running;
+  animation-fill-mode: none;
+  animation-composition: replace;
+}
+
+/* -------------------- IMAGE STYLING -------------------- */
+.card img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: transform 0.8s ease;
+  z-index: 1;
+  position: relative;
+}
+
+/* -------------------- CARD CONTENT -------------------- */
+.card .content {
+  padding: 22px;
+  text-align: center;
+  z-index: 2;
+  position: relative;
+  background: #fff;
+}
+
+.card h3 {
+  margin: 10px 0;
+  font-size: 20px;
+  color: #111;
+  letter-spacing: 0.5px;
+}
+
+.card p {
+  color: #555;
+  font-size: 15px;
+}
+
+/* -------------------- HOVER EFFECTS -------------------- */
+.card:hover {
+  transform: translateY(-10px) scale(1.03);
+  box-shadow: 0 25px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover img {
+  transform: scale(1.1); /* Smooth zoom effect on image */
+}
+
+.card:hover::before {
+  opacity: 0.6; /* Brighter glow on hover */
+  filter: blur(10px);
+}
+
+/* -------------------- KEYFRAMES DEFINITIONS -------------------- */
+
+/* Entry animation: fade + upward movement */
+@keyframes fadeRise {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Border gradient rotation */
+@keyframes gradientFlow {
+  0% { background-position: 0% 50%; filter: hue-rotate(0deg); }
+  50% { background-position: 100% 50%; filter: hue-rotate(180deg); }
+  100% { background-position: 0% 50%; filter: hue-rotate(360deg); }
+}
+</style>
+</head>
+
+<body>
+  <!-- CARD STRUCTURE -->
+  <div class="card">
+    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=500" alt="Profile">
+    <div class="content">
+      <h3>Shalini Verma</h3>
+      <p>Full Stack Developer & Corporate Trainer</p>
+    </div>
+  </div>
+</body>
+</html>

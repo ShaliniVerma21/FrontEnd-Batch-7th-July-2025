@@ -1,0 +1,116 @@
+<!-- 
+Program 1: Modern Button Hover Animation (Extended Version)
+------------------------------------------------------------
+Purpose:
+To demonstrate a glowing gradient border effect on a button using all CSS animation properties.
+
+Concept:
+- Button with hidden rotating gradient background.
+- The gradient activates with hover effect.
+- Smooth transitions and continuous rotation.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Animated Gradient Button - Extended</title>
+<style>
+/* ---------- GLOBAL PAGE STYLES ---------- */
+body {
+  display: flex;                         /* Centers the button horizontally and vertically */
+  justify-content: center;
+  align-items: center;
+  height: 100vh;                         /* Full viewport height */
+  background: #0d1117;                   /* Dark background for better contrast */
+  font-family: 'Poppins', sans-serif;    /* Modern font */
+}
+
+/* ---------- BUTTON BASE STYLES ---------- */
+.button {
+  position: relative;                    /* Needed for ::before pseudo-element positioning */
+  padding: 14px 40px;
+  border: none;
+  background: #161b22;                   /* Base dark background */
+  color: #fff;
+  font-size: 18px;
+  letter-spacing: 1px;
+  border-radius: 12px;                   /* Rounded corners */
+  overflow: hidden;                      /* Hide gradient overflow */
+  cursor: pointer;
+  transition: all 0.4s ease;             /* Smooth hover transitions */
+}
+
+/* ---------- GRADIENT BORDER ANIMATION ---------- */
+.button::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(45deg, #00ff99, #00ccff, #9900ff, #ff0066);
+  
+  /* Animation applied here */
+  animation-name: rotateGradient;         /* Defines which keyframes to use */
+  animation-duration: 4s;                 /* Total time to complete one rotation */
+  animation-delay: 0s;                    /* Starts immediately */
+  animation-timing-function: linear;      /* Smooth continuous speed */
+  animation-iteration-count: infinite;    /* Loops endlessly */
+  animation-direction: normal;            /* Rotates in the same direction */
+  animation-play-state: running;          /* Keeps playing (can be paused dynamically) */
+  animation-fill-mode: none;              /* No state retained after animation ends */
+  animation-composition: replace;         /* Replaces other animations if applied */
+
+  z-index: 0;
+  opacity: 0;                             /* Hidden initially */
+  transition: opacity 0.4s ease;          /* Smooth fade-in effect */
+}
+
+/* ---------- HOVER EFFECT ---------- */
+.button:hover::before {
+  opacity: 1;                             /* Gradient becomes visible on hover */
+}
+
+.button span {
+  position: relative;
+  z-index: 1;                             /* Keeps text above gradient layer */
+}
+
+/* ---------- TEXT HOVER EFFECT ---------- */
+.button:hover span {
+  color: #00e0ff;                         /* Slight text color change */
+  transition: color 0.3s ease;
+}
+
+/* ---------- KEYFRAMES FOR GRADIENT ROTATION ---------- */
+@keyframes rotateGradient {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);             /* Adds subtle color variation */
+  }
+  50% {
+    filter: hue-rotate(180deg);           /* Smooth color shift halfway */
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);
+  }
+}
+
+/* ---------- OPTIONAL ACTIVE/FOCUS STATES ---------- */
+.button:active {
+  transform: scale(0.97);                 /* Slight shrink on click */
+}
+
+.button:focus {
+  outline: 2px solid #00e0ff;             /* Accessible focus outline */
+  outline-offset: 4px;
+}
+</style>
+</head>
+<body>
+  <button class="button"><span>Explore Now</span></button>
+</body>
+</html>

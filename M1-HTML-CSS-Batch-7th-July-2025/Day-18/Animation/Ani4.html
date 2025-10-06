@@ -1,0 +1,114 @@
+<!-- Program: Extended Professional Box Animation using All CSS Animation Properties -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional CSS Animation</title>
+
+  <style> 
+    /* 🌆 Page Setup */
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      overflow: hidden;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    /* 🔶 Animated Box Styling */
+    .box {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+      position: relative;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+
+      /* 🎬 Animation Properties */
+      animation-name: boxAnimation;          /* Refers to the @keyframes below */
+      animation-duration: 8s;                /* Total duration per cycle */
+      animation-delay: 1s;                   /* Delay before animation starts */
+      animation-iteration-count: infinite;   /* Repeat infinitely */
+      animation-direction: alternate;        /* Alternate forward and backward */
+      animation-timing-function: ease-in-out;/* Smooth speed control */
+      animation-fill-mode: both;             /* Apply styles before & after animation */
+      animation-play-state: running;         /* Keeps it active by default */
+    }
+
+    /* ✨ Keyframes: Defines the animation sequence */
+    @keyframes boxAnimation {
+      0% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+        transform: rotate(0deg) scale(1);
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+      }
+      25% {
+        background-color: yellow;
+        left: 400px;
+        top: 0px;
+        transform: rotate(90deg) scale(1.2);
+        box-shadow: 0 0 25px rgba(255, 255, 0, 0.6);
+      }
+      50% {
+        background-color: blue;
+        left: 400px;
+        top: 400px;
+        transform: rotate(180deg) scale(1.3);
+        box-shadow: 0 0 30px rgba(0, 0, 255, 0.6);
+      }
+      75% {
+        background-color: green;
+        left: 0px;
+        top: 400px;
+        transform: rotate(270deg) scale(1.1);
+        box-shadow: 0 0 35px rgba(0, 255, 0, 0.6);
+      }
+      100% {
+        background-color: red;
+        left: 0px;
+        top: 0px;
+        transform: rotate(360deg) scale(1);
+        box-shadow: 0 0 40px rgba(255, 0, 0, 0.7);
+      }
+    }
+
+    /* 🖱️ Hover Effect: Pause and Highlight */
+    .box:hover {
+      animation-play-state: paused;          /* Pause animation when hovered */
+      cursor: pointer;
+      filter: brightness(1.2);
+      box-shadow: 0 0 40px rgba(255, 255, 255, 0.7);
+    }
+
+    /* 🏷️ Optional Label for Clarity */
+    h2 {
+      position: absolute;
+      bottom: 40px;
+      color: #e0e7ff;
+      letter-spacing: 1px;
+      font-size: 20px;
+      text-align: center;
+      animation: fadeIn 2s ease forwards;
+    }
+
+    /* 🌟 Text Fade-In Animation */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- 💠 Animated Element -->
+  <div class="box"></div>
+  <h2>Professional CSS Box Animation (All Properties Used)</h2>
+
+</body>
+</html>

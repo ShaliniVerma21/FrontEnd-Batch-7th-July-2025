@@ -1,0 +1,47 @@
+<!-- 
+  Program: Basic CSS Animation (Color Transition Example)
+  Description: Demonstrates the use of CSS animation using @keyframes 
+  to smoothly change a div's background color over time.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Color Animation</title>
+
+    <style> 
+        /* 
+          Styling the div element:
+          - Setting its size (width, height)
+          - Initial background color
+          - Applying animation properties
+        */
+        div {
+          width: 100px;               /* Box width */
+          height: 100px;              /* Box height */
+          background-color: red;      /* Initial color before animation starts */
+          
+          /* Animation properties */
+          animation-name: example;    /* Refers to the keyframes named 'example' */
+          animation-duration: 8s;     /* The animation runs for 8 seconds */
+        }
+
+        /* 
+          Defining the keyframes animation:
+          - 'from' defines the starting state
+          - 'to' defines the ending state
+        */
+        @keyframes example {
+          from { background-color: blue; }    /* Starting color */
+          to { background-color: yellow; }    /* Ending color */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The animated div box -->
+    <div></div>
+</body>
+</html>

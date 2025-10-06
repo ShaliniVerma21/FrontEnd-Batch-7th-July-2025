@@ -1,0 +1,56 @@
+<!-- 
+  Program: Moving and Color-Changing Box Animation
+  Description: Demonstrates a div element that changes color 
+  and moves around the screen using CSS @keyframes.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Color Box Animation</title>
+
+    <style> 
+        /* 
+          Styling the animated div:
+          - Sets size, initial color, and position
+          - Applies animation properties
+        */
+        div {
+          width: 100px;                /* Width of the box */
+          height: 100px;               /* Height of the box */
+          background-color: red;       /* Initial color */
+          position: relative;          /* Allows 'left' and 'top' movement */
+
+          /* Animation properties */
+          animation-name: example;          /* Keyframes to apply */
+          animation-duration: 4s;           /* Time for one complete cycle */
+          animation-iteration-count: infinite; /* Repeats forever */
+          /* Optional properties you can add:
+             animation-delay: 1s;
+             animation-direction: alternate;
+             animation-timing-function: ease-in-out;
+          */
+        }
+
+        /* 
+          Keyframes define the animation steps:
+          - Moves the box around the container
+          - Changes background color at each stage
+        */
+        @keyframes example {
+          0%   { background-color: red; left: 0px; top: 0px; }        /* Start position & color */
+          25%  { background-color: yellow; left: 500px; top: 0px; }   /* Move right */
+          50%  { background-color: blue; left: 500px; top: 500px; }   /* Move down */
+          75%  { background-color: green; left: 0px; top: 500px; }    /* Move left */
+          100% { background-color: red; left: 0px; top: 0px; }        /* Return to start */
+        }
+    </style>
+</head>
+
+<body>
+    <!-- The animated box -->
+    <div></div>
+</body>
+</html>

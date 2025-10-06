@@ -1,0 +1,97 @@
+<!-- 
+Program 2: Professional Loading Spinner Animation (Extended Version)
+--------------------------------------------------------------------
+Purpose:
+A modern circular loader animation that demonstrates the use of ALL CSS animation properties.
+
+Concept:
+- A circle spins infinitely to indicate loading or processing.
+- Smooth rotation using CSS keyframes.
+- Fully customizable animation speed, timing, and behavior.
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Loader - Extended</title>
+
+<style>
+/* ----------------------- GLOBAL PAGE STYLES ----------------------- */
+body {
+  background: #f4f6f8;             /* Soft neutral background color */
+  display: flex;                   /* Center the loader horizontally */
+  justify-content: center;
+  align-items: center;             /* Center the loader vertically */
+  height: 100vh;                   /* Full viewport height */
+  margin: 0;                       /* Remove default margins */
+}
+
+/* ----------------------- LOADER BASE DESIGN ----------------------- */
+.loader {
+  width: 80px;                     /* Diameter of loader */
+  height: 80px;
+  border: 8px solid #d1d1d1;       /* Light gray base border */
+  border-top: 8px solid #0078ff;   /* Blue top border for motion visibility */
+  border-radius: 50%;              /* Make it circular */
+  
+  /* ---------------- ANIMATION PROPERTIES ---------------- */
+  animation-name: spinCircle;             /* Name of the keyframes used */
+  animation-duration: 1.5s;               /* Time taken for one full spin */
+  animation-delay: 0s;                    /* No delay before starting */
+  animation-timing-function: linear;      /* Constant speed rotation */
+  animation-iteration-count: infinite;    /* Loops endlessly */
+  animation-direction: normal;            /* Spins in the same direction */
+  animation-play-state: running;          /* Keeps playing (can pause via CSS/JS) */
+  animation-fill-mode: none;              /* No retained style after animation ends */
+  animation-composition: replace;         /* Replaces other possible animations */
+}
+
+/* ----------------------- OPTIONAL STATES ----------------------- */
+.loader:hover {
+  animation-play-state: paused;           /* Pause rotation when hovered */
+  cursor: pointer;                        /* Shows interactivity */
+}
+
+/* ----------------------- KEYFRAMES DEFINITION ----------------------- */
+@keyframes spinCircle {
+  0% {
+    transform: rotate(0deg);
+    filter: hue-rotate(0deg);             /* Start color state */
+  }
+  50% {
+    filter: hue-rotate(180deg);           /* Midway color shift */
+  }
+  100% {
+    transform: rotate(360deg);
+    filter: hue-rotate(360deg);           /* Complete rotation */
+  }
+}
+
+/* ----------------------- OPTIONAL SHADOW EFFECT ----------------------- */
+.loader-shadow {
+  width: 100px;
+  height: 10px;
+  background: rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  margin-top: 20px;
+  filter: blur(4px);
+  animation: shadowPulse 1.5s ease-in-out infinite alternate;
+}
+
+/* Shadow animation for depth illusion */
+@keyframes shadowPulse {
+  0% { transform: scaleX(1); opacity: 0.4; }
+  100% { transform: scaleX(0.7); opacity: 0.2; }
+}
+</style>
+</head>
+
+<body>
+  <!-- Loader with optional shadow below -->
+  <div class="loader"></div>
+  <!-- Uncomment to show a subtle shadow pulse effect -->
+  <!-- <div class="loader-shadow"></div> -->
+</body>
+</html>
