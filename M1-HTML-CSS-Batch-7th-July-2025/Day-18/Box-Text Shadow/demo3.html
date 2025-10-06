@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo 3: Repeating Gradients with Advanced Animations</title>
+<style>
+/* =======================================
+   General Box Styling
+   ======================================= */
+.box {
+    height: 200px;
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 25px rgba(0,0,0,0.35); /* Depth effect */
+    text-align: center;
+    line-height: 200px; /* Center text vertically */
+    font-size: 20px;
+    color: white;
+    transition: all 0.5s ease; /* Smooth hover transitions */
+}
+
+/* =======================================
+   Hover Effects: Scale, Rotate, Shadow
+   ======================================= */
+.box:hover {
+    transform: scale(1.1) rotate(-5deg); /* Scale and rotate on hover */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6); /* Shadow intensifies */
+}
+
+/* =======================================
+   Repeating Gradient Backgrounds
+   ======================================= */
+.box7 { 
+    background-image: repeating-linear-gradient(45deg, red, yellow 20px, green 40px); 
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7); 
+}
+.box8 { 
+    background-image: repeating-radial-gradient(circle, blue 10%, white 20%); 
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7); 
+}
+.box9 { 
+    background-image: repeating-conic-gradient(red 0deg 30deg, yellow 30deg 60deg, green 60deg 90deg); 
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.7); 
+}
+
+/* =======================================
+   Keyframes for Floating Sideways Animation
+   ======================================= */
+@keyframes floatSide {
+    0%   { transform: translateX(0px); }
+    25%  { transform: translateX(10px); }
+    50%  { transform: translateX(20px); }
+    75%  { transform: translateX(10px); }
+    100% { transform: translateX(0px); }
+}
+
+/* =======================================
+   Apply Animation with All CSS Properties
+   ======================================= */
+.box7 {
+    animation-name: floatSide;
+    animation-duration: 4s;              /* Duration of one cycle */
+    animation-timing-function: ease-in-out; /* Smooth speed curve */
+    animation-delay: 0s;                 /* Start immediately */
+    animation-iteration-count: infinite; /* Repeat indefinitely */
+    animation-direction: normal;         /* Forward direction */
+    animation-fill-mode: forwards;       /* Maintain end state if stopped */
+    animation-play-state: running;       /* Can be paused/resumed */
+}
+
+.box8 {
+    animation-name: floatSide;
+    animation-duration: 3.5s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Custom easing */
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;      /* Reverse every cycle */
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+
+.box9 {
+    animation-name: floatSide;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; /* Alternate in reverse */
+    animation-fill-mode: both;
+    animation-play-state: running;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Demo 3: Repeating Gradients with Advanced Animations</h1>
+
+<!-- Boxes with Repeating Gradients + Shadow + Animation -->
+<div class="box box7">Box 7</div>
+<div class="box box8">Box 8</div>
+<div class="box box9">Box 9</div>
+
+</body>
+</html>

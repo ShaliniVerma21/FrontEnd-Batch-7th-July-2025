@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo 5: Combined Effects</title>
+<style>
+/* =======================================
+   General Box Styling
+   ======================================= */
+.box {
+    height: 200px;
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 6px 25px rgba(0,0,0,0.35); /* Depth shadow */
+    text-align: center;
+    line-height: 200px; /* Center text vertically */
+    font-size: 20px;
+    color: white;
+    transition: all 0.5s ease; /* Smooth hover transitions */
+}
+
+/* =======================================
+   Hover Effects: Scale, Rotate, Shadow
+   ======================================= */
+.box:hover {
+    transform: scale(1.2) rotate(15deg); /* Enlarge + rotate */
+    box-shadow: 0 25px 60px rgba(0,0,0,0.7); /* Intensify shadow */
+    opacity: 0.95; /* Slight transparency effect */
+}
+
+/* =======================================
+   Gradient Backgrounds
+   ======================================= */
+.box13 { 
+    background-image: linear-gradient(to right, red, orange, yellow, green); 
+    text-shadow: 2px 2px 4px black;
+}
+.box14 { 
+    background-image: radial-gradient(circle at center, blue, purple, pink); 
+    text-shadow: 2px 2px 4px black;
+}
+.box15 { 
+    background-image: conic-gradient(red, yellow, green, blue); 
+    text-shadow: 2px 2px 4px black;
+}
+
+/* =======================================
+   Floating Animation
+   ======================================= */
+@keyframes float {
+    0%   { transform: translateY(0px) rotate(0deg); }
+    25%  { transform: translateY(-15px) rotate(3deg); }
+    50%  { transform: translateY(-25px) rotate(5deg); }
+    75%  { transform: translateY(-15px) rotate(-3deg); }
+    100% { transform: translateY(0px) rotate(0deg); }
+}
+
+/* =======================================
+   Gradient Shift Animation
+   ======================================= */
+@keyframes gradientShift {
+    0%   { background-position: 0% 50%; }
+    50%  { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* =======================================
+   Spin Animation
+   ======================================= */
+@keyframes spin {
+    0%   { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* =======================================
+   Combined Animation Application
+   ======================================= */
+.box13 {
+    background-size: 200% 200%;
+    animation: gradientShift 6s ease-in-out infinite, float 4s ease-in-out infinite, spin 10s linear infinite;
+}
+
+.box14 {
+    background-size: 200% 200%;
+    animation: gradientShift 7s linear infinite, float 5s ease-in-out infinite, spin 12s linear infinite;
+}
+
+.box15 {
+    animation: float 4s ease-in-out infinite, spin 8s linear infinite, opacityChange 6s ease-in-out infinite;
+}
+
+/* =======================================
+   Opacity Animation
+   ======================================= */
+@keyframes opacityChange {
+    0%   { opacity: 1; }
+    50%  { opacity: 0.7; }
+    100% { opacity: 1; }
+}
+
+/* =======================================
+   Additional Effects (Optional)
+   - Scale, Shadow Pulse, etc.
+   ======================================= */
+@keyframes shadowPulse {
+    0%, 100% { box-shadow: 0 6px 25px rgba(0,0,0,0.35); }
+    50%       { box-shadow: 0 20px 60px rgba(0,0,0,0.7); }
+}
+.box13, .box14, .box15 {
+    animation: gradientShift 6s ease-in-out infinite,
+               float 4s ease-in-out infinite,
+               spin 10s linear infinite,
+               opacityChange 6s ease-in-out infinite,
+               shadowPulse 5s ease-in-out infinite;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Demo 5: Combined Gradient, Floating, Spin & Opacity Effects</h1>
+
+<!-- Boxes with Full Combined Animations -->
+<div class="box box13">Box 13</div>
+<div class="box box14">Box 14</div>
+<div class="box box15">Box 15</div>
+
+</body>
+</html>

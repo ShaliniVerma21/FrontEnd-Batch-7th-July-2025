@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo 2: Conic & Radial Gradients with Animations</title>
+<style>
+/* =======================================
+   General Box Styling
+   ======================================= */
+.box {
+    height: 200px;
+    width: 200px;
+    margin: 20px auto;
+    border-radius: 15px; /* Rounded corners */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.4); /* Depth effect */
+    text-align: center;
+    line-height: 200px; /* Center text vertically */
+    font-size: 20px;
+    color: white;
+    transition: all 0.4s ease; /* Smooth hover effects */
+}
+
+/* =======================================
+   Hover Effects: Rotate, Scale, Shadow
+   ======================================= */
+.box:hover {
+    transform: rotate(10deg) scale(1.08); /* Rotate + scale on hover */
+    box-shadow: 0 12px 30px rgba(0,0,0,0.6); /* Shadow intensifies */
+}
+
+/* =======================================
+   Gradient Backgrounds & Text Shadows
+   ======================================= */
+.box4 { 
+    background-image: conic-gradient(red, yellow, green, blue); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+.box5 { 
+    background-image: radial-gradient(circle at center, pink, purple, navy); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+.box6 { 
+    background-image: repeating-conic-gradient(orange 0deg 15deg, purple 15deg 30deg); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+}
+
+/* =======================================
+   Keyframes for Spinning Animation
+   ======================================= */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* =======================================
+   Apply Animation to Boxes
+   Using all CSS Animation properties
+   ======================================= */
+.box4 {
+    animation-name: spin;
+    animation-duration: 6s;              /* Duration of one cycle */
+    animation-timing-function: linear;   /* Constant speed */
+    animation-delay: 0s;                 /* Start immediately */
+    animation-iteration-count: infinite; /* Repeat infinitely */
+    animation-direction: normal;         /* Forward direction */
+    animation-fill-mode: forwards;       /* Maintain end state if stopped */
+    animation-play-state: running;       /* Can be paused/resumed */
+}
+
+.box5 {
+    animation-name: spin;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out; /* Smooth start/end */
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;      /* Reverse every cycle */
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.box6 {
+    animation-name: spin;
+    animation-duration: 7s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Custom easing */
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; /* Alternate reverse */
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Demo 2: Conic & Radial Gradients with Animations</h1>
+
+<!-- Boxes with Conic and Radial Gradients + Shadow + Animation -->
+<div class="box box4">Box 4</div>
+<div class="box box5">Box 5</div>
+<div class="box box6">Box 6</div>
+
+</body>
+</html>

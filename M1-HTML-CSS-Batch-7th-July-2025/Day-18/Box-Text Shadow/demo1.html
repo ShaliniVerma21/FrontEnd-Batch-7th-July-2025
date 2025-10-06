@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Demo 1: Gradient Boxes with Animations</title>
+<style>
+/* =======================================
+   General Box Styling
+   ======================================= */
+.box {
+    height: 200px;
+    width: 200px;
+    border: 5px double black; /* Border style */
+    margin: 20px auto;
+    padding: 5px;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Depth effect */
+    text-align: center;
+    line-height: 200px; /* Center text vertically */
+    font-size: 24px;
+    color: white;
+    transition: all 0.5s ease; /* Smooth hover and transform effects */
+}
+
+/* =======================================
+   Hover Effects: Scale, Rotate, Shadow
+   ======================================= */
+.box:hover {
+    transform: scale(1.1) rotate(5deg); /* Slight enlargement + rotation */
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6); /* Enhanced shadow on hover */
+}
+
+/* =======================================
+   Gradient Backgrounds & Text Shadow
+   ======================================= */
+.box1 { 
+    background-image: linear-gradient(red, green, blue); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.box2 { 
+    background-image: linear-gradient(to right, orange, yellow, green); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.box3 { 
+    background-image: radial-gradient(circle, purple, pink, white); 
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* =======================================
+   Floating Animation (TranslateY)
+   ======================================= */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+
+/* Apply animation to boxes */
+.box1, .box2, .box3 {
+    animation: float 3s ease-in-out infinite;
+}
+
+/* =======================================
+   Advanced Animation Properties
+   ======================================= */
+.box1 {
+    animation-name: float;
+    animation-duration: 3s;          /* Duration */
+    animation-timing-function: ease-in-out; /* Speed curve */
+    animation-delay: 0s;             /* Start delay */
+    animation-iteration-count: infinite; /* Repeat infinitely */
+    animation-direction: alternate;  /* Forward then backward */
+    animation-fill-mode: forwards;   /* Maintain end state */
+    animation-play-state: running;   /* Can be paused/resumed */
+}
+
+.box2 {
+    animation-name: float;
+    animation-duration: 4s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse; /* Reverse on alternate cycle */
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+
+.box3 {
+    animation-name: float;
+    animation-duration: 5s;
+    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Custom easing */
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+    animation-play-state: running;
+}
+</style>
+</head>
+<body>
+
+<h1 style="text-align:center;">Demo 1: Gradient Boxes with Animations</h1>
+
+<!-- Boxes with Gradient + Shadow + Animation -->
+<div class="box box1">Box 1</div>
+<div class="box box2">Box 2</div>
+<div class="box box3">Box 3</div>
+
+</body>
+</html>
